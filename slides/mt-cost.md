@@ -22,7 +22,7 @@ layout: center
     </div>
     <!-- Animated package area -->
     <div class="mtw-lift">
-      <div class="mtw-pack">
+      <div class="mtw-pack" v-click>
         <div class="mtw-pack-label">Thread-Kontext<br/>Stack Frame</div>
         <div class="mtw-watch">⏱</div>
       </div>
@@ -153,7 +153,9 @@ layout: center
   height: 60px;
   margin-left: -65px;
   margin-top: -30px;
-  animation: mtwOrbit 4s ease-in-out infinite;
+}
+.mtw-pack:not(.slidev-vclick-hidden) {
+  animation: mtwOrbit 4s ease-in-out 1 forwards;
 }
 .mtw-pack-label {
   padding: 0.4rem 0.5rem;
@@ -184,8 +186,9 @@ layout: center
   top: -20px;
   right: -16px;
   font-size: 1.3rem;
+}
+.mtw-pack:not(.slidev-vclick-hidden) .mtw-watch {
   animation: mtwTick 0.6s ease-in-out infinite;
-  filter: drop-shadow(0 0 6px rgba(255,200,0,0.5));
 }
 
 /* CPU */
@@ -225,15 +228,15 @@ layout: center
 
 /* Keyframes */
 @keyframes mtwOrbit {
-  0%   { transform: translate(-60px, 100px); opacity: 0; }
+  0%   { transform: translate(-35px, 110px); opacity: 0; }
   8%   { opacity: 1; }
-  25%  { transform: translate(-60px, -30px); }
-  40%  { transform: translate(-20px, -80px); }
-  50%  { transform: translate(0px, -90px); }
-  60%  { transform: translate(20px, -80px); }
-  75%  { transform: translate(60px, -30px); }
-  92%  { transform: translate(60px, 100px); opacity: 1; }
-  100% { transform: translate(60px, 100px); opacity: 0; }
+  25%  { transform: translate(-35px, -30px); }
+  40%  { transform: translate(-10px, -85px); }
+  50%  { transform: translate(0px, -110px); }
+  60%  { transform: translate(10px, -85px); }
+  75%  { transform: translate(35px, -30px); }
+  92%  { transform: translate(35px, 110px); opacity: 1; }
+  100% { transform: translate(35px, 110px); opacity: 0; }
 }
 @keyframes mtwTick {
   0%,100% { transform: rotate(-10deg) scale(1); }
