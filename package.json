@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export"
+    "build": "NODE_OPTIONS='--no-warnings' slidev build",
+    "dev": "NODE_OPTIONS='--no-warnings' slidev --open",
+    "export": "NODE_OPTIONS='--no-warnings' slidev export"
   },
   "dependencies": {
     "@slidev/cli": "^52.16.0",
