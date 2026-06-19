@@ -3,6 +3,7 @@ theme: seriph
 layout: center
 drawings:
   persist: false
+html: true
 ---
 
 ---
@@ -47,6 +48,38 @@ src: ./slides/mt-cost.md
 
 ---
 src: ./slides/avx.md
+---
+
+---
+src: ./slides/memory-opt.md
+---
+
+---
+src: ./slides/operator-chain.md
+---
+
+---
+src: ./slides/object-vec.md
+---
+
+---
+src: ./slides/property-update.md
+---
+
+---
+src: ./slides/implicit-vec.md
+---
+
+---
+src: ./slides/hardware-scale.md
+---
+
+---
+src: ./slides/summary.md
+---
+
+---
+src: ./slides/contact.md
 ---
 
 ---

@@ -2,4 +2,4 @@
 layout: center
 ---
 
-<AvxSlide />
+<SummarySlide />
