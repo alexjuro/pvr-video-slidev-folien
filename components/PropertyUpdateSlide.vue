@@ -7,9 +7,7 @@
     </div>
 
     <!-- ===== CODE BLOCK ===== -->
-    <div class="pup-code-wrap">
-      <pre class="pup-code"><code><span class="pp-var">layers</span><span class="pp-hat">^</span><span class="pp-prop">bias</span><span class="pp-op"> = </span><span class="pp-val">0.5</span></code></pre>
-    </div>
+    <pre class="slidev-code"><code class="language-java">layers^.bias = 0.5</code></pre>
 
     <!-- ===== THREE LAYER RECTANGLES ===== -->
     <div v-if="phase >= 2" class="pup-layers">
@@ -78,8 +76,8 @@ onMounted(() => {
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #00e5ff;
-  text-shadow: 0 0 40px rgba(0,229,255,0.5), 0 0 80px rgba(0,229,255,0.2);
+  color: #b1c7f3;
+  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -87,40 +85,10 @@ onMounted(() => {
   font-size: 2rem;
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #ffa500;
-  text-shadow: 0 0 30px rgba(255,165,0,0.4);
+  color: #fea619;
+  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
-}
-
-/* ===== CODE ===== */
-.pup-code-wrap {
-  padding: 0.4rem 1.2rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
-  border-radius: 8px;
-  opacity: 0;
-  animation: pfadeIn 0.6s ease-out 0.3s both;
-}
-.pup-code {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
-}
-.pp-var { color: #ffd700; }
-.pp-hat {
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: #39ff14;
-  text-shadow: 0 0 20px rgba(57,255,20,0.8), 0 0 40px rgba(57,255,20,0.4);
-  animation: phatPulse 1.2s ease-in-out 0.8s infinite both;
-}
-.pp-prop { color: #7ec8e3; }
-.pp-op   { color: #7ec8e3; }
-.pp-val {
-  color: #ffd700;
-  animation: pvalBlink 0.7s ease-in-out 0.8s 4 both;
 }
 
 /* ===== LAYERS ===== */
@@ -137,17 +105,17 @@ onMounted(() => {
   justify-content: space-between;
   width: 340px;
   padding: 0.5rem 1rem;
-  background: linear-gradient(145deg,#1a1a2e,#16213e);
-  border: 2px solid #0f3460;
+  background: linear-gradient(145deg,#000f27,#0b2447);
+  border: 2px solid #32476c;
   border-radius: 8px;
   opacity: 0;
   animation: pfadeIn 0.5s ease-out both;
   transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
 }
 .pup-layer-lit {
-  border-color: #39ff14;
-  background: linear-gradient(145deg,#1a2a1e,#16213e);
-  box-shadow: 0 0 20px rgba(57,255,20,0.15);
+  border-color: #009d8d;
+  background: linear-gradient(145deg,#002a25,#0b2447);
+  box-shadow: 0 0 20px rgba(0,157,141,0.15);
 }
 .pup-layer-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -164,19 +132,19 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
   font-weight: 600;
-  color: #7ec8e3;
+  color: #b1c7f3;
 }
 .pup-bias-op {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
-  color: #5a7a9a;
+  color: #778cb5;
 }
 .pup-bias-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.75rem;
   font-weight: 800;
-  color: #ffd700;
-  text-shadow: 0 0 10px rgba(255,215,0,0.4);
+  color: #fea619;
+  text-shadow: 0 0 10px rgba(254,166,25,0.4);
 }
 
 /* ===== BEAM ===== */
@@ -193,13 +161,13 @@ onMounted(() => {
 .pup-beam-line {
   width: 2px;
   height: 100px;
-  background: linear-gradient(180deg, #39ff14, transparent);
+  background: linear-gradient(180deg, #009d8d, transparent);
   animation: pbeamFade 0.8s ease-out both;
 }
 .pup-beam-arrow {
   font-size: 1rem;
-  color: #39ff14;
-  text-shadow: 0 0 12px rgba(57,255,20,0.6);
+  color: #009d8d;
+  text-shadow: 0 0 12px rgba(0,157,141,0.6);
   animation: pbeamBounce 0.5s ease-in-out infinite alternate;
 }
 
@@ -223,14 +191,6 @@ onMounted(() => {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes phatPulse {
-  0%,100% { opacity: 1; transform: scale(1); }
-  50%     { opacity: 0.7; transform: scale(1.25); }
-}
-@keyframes pvalBlink {
-  0%,100% { opacity: 1; color: #ffd700; }
-  50%     { opacity: 1; color: #ffff00; text-shadow: 0 0 15px rgba(255,255,0,0.6); }
-}
 @keyframes pbeamFade {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -238,5 +198,9 @@ onMounted(() => {
 @keyframes pbeamBounce {
   from { transform: translateY(0); }
   to   { transform: translateY(4px); }
+}
+
+.slidev-code {
+  font-size: 1.3rem !important;
 }
 </style>

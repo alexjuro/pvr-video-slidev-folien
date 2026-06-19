@@ -7,9 +7,7 @@
     </div>
 
     <!-- ===== CODE BLOCK ===== -->
-    <div class="ovec-code-wrap">
-      <pre class="ovec-code"><code><span class="ov-var">states</span><span class="ov-op"> = </span><span class="ov-var">neurons</span><span class="ov-hat">^</span><span class="ov-meth">getActiveState</span><span class="ov-op">()</span></code></pre>
-    </div>
+    <pre class="slidev-code"><code class="language-java">states = neurons^.getActiveState()</code></pre>
 
     <!-- ===== VISUAL ===== -->
     <div class="ovec-visual">
@@ -102,8 +100,8 @@ onMounted(() => {
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #00e5ff;
-  text-shadow: 0 0 40px rgba(0,229,255,0.5), 0 0 80px rgba(0,229,255,0.2);
+  color: #b1c7f3;
+  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -111,36 +109,10 @@ onMounted(() => {
   font-size: 2rem;
   font-weight:800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #ffa500;
-  text-shadow: 0 0 30px rgba(255,165,0,0.4);
+  color: #fea619;
+  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
-}
-
-/* ===== CODE ===== */
-.ovec-code-wrap {
-  padding: 0.3rem 1rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
-  border-radius: 8px;
-  opacity: 0;
-  animation: ofadeIn 0.6s ease-out 0.3s both;
-}
-.ovec-code {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
-}
-.ov-var { color: #ffd700; }
-.ov-op  { color: #7ec8e3; }
-.ov-meth { color: #7ec8e3; }
-.ov-hat {
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: #ff6bff;
-  text-shadow: 0 0 20px rgba(255,107,255,0.8), 0 0 40px rgba(255,107,255,0.4);
-  animation: ohatPulse 1.2s ease-in-out 1.0s infinite both;
 }
 
 /* ===== VISUAL ===== */
@@ -163,7 +135,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.55rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.1em;
   margin-bottom: 0.2rem;
 }
@@ -182,34 +154,34 @@ onMounted(() => {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid #0f3460;
-  background: #0a0a1a;
+  border: 2px solid #32476c;
+  background: #000f27;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
 }
 .ovec-neuron-lit .ovec-neuron-ring {
-  border-color: #ff6bff;
+  border-color: #fea619;
   background: #1a0a1a;
-  box-shadow: 0 0 15px rgba(255,107,255,0.25);
+  box-shadow: 0 0 15px rgba(254,166,25,0.25);
 }
 .ovec-neuron-dot {
   width: 8px;
   height: 8px;
   border-radius:50%;
-  background: #5a7a9a;
+  background: #778cb5;
   transition: background 0.5s;
 }
 .ovec-neuron-lit .ovec-neuron-dot {
-  background: #ff6bff;
-  box-shadow: 0 0 10px rgba(255,107,255,0.5);
+  background: #fea619;
+  box-shadow: 0 0 10px rgba(254,166,25,0.5);
 }
 .ovec-neuron-idx {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.45rem;
   font-weight: 600;
-  color: #3a5a7a;
+  color: #32476c;
   min-width: 10px;
 }
 
@@ -220,8 +192,8 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.6rem;
   font-weight: 700;
-  color: #39ff14;
-  text-shadow: 0 0 8px rgba(57,255,20,0.6);
+  color: #009d8d;
+  text-shadow: 0 0 8px rgba(0,157,141,0.6);
   animation: oflyRight 0.5s ease-out forwards;
 }
 
@@ -235,7 +207,7 @@ onMounted(() => {
 .ovec-wave-line {
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #ff6bff, #39ff14);
+  background: linear-gradient(90deg, #fea619, #009d8d);
   position: relative;
   animation: owaveExpand 0.8s ease-out 3.5s both;
 }
@@ -258,7 +230,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.45rem;
   font-weight: 700;
-  color: #ff6bff;
+  color: #fea619;
   letter-spacing: 0.1em;
   opacity: 0;
   animation: ofadeIn 0.4s ease-out 4.0s both;
@@ -275,15 +247,15 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.55rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.1em;
   margin-bottom: 0.2rem;
 }
 .ovec-state-cell {
   width: 50px;
   height: 30px;
-  background: #0a0a1a;
-  border: 2px solid #0f3460;
+  background: #000f27;
+  border: 2px solid #32476c;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -291,16 +263,16 @@ onMounted(() => {
   transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
 }
 .ovec-state-filled {
-  border-color: #39ff14;
-  background: #0a1a0a;
-  box-shadow: 0 0 12px rgba(57,255,20,0.2);
+  border-color: #009d8d;
+  background: #00120f;
+  box-shadow: 0 0 12px rgba(0,157,141,0.2);
 }
 .ovec-state-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #39ff14;
-  text-shadow: 0 0 8px rgba(57,255,20,0.4);
+  color: #009d8d;
+  text-shadow: 0 0 8px rgba(0,157,141,0.4);
   animation: opopIn 0.3s ease-out both;
 }
 
@@ -321,10 +293,6 @@ onMounted(() => {
   from { opacity: 0; transform: scale(0.5); }
   to   { opacity: 1; transform: scale(1); }
 }
-@keyframes ohatPulse {
-  0%,100% { opacity: 1; transform: scale(1); }
-  50%     { opacity: 0.6; transform: scale(1.3); }
-}
 @keyframes oflyRight {
   from { opacity: 0; transform: translateX(-10px); }
   to   { opacity: 1; transform: translateX(60px); }
@@ -332,5 +300,9 @@ onMounted(() => {
 @keyframes owaveExpand {
   from { transform: scaleX(0); opacity: 0; }
   to   { transform: scaleX(1); opacity: 1; }
+}
+
+.slidev-code {
+  font-size: 1.3rem !important;
 }
 </style>

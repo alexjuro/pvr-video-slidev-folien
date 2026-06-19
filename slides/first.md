@@ -77,6 +77,7 @@ layout: center
   transform-origin: center center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   z-index: 3;
+  animation: beamWobble 2.5s ease-in-out infinite;
 }
 
 /* === KNOBS (beam ends) === */
@@ -116,6 +117,12 @@ layout: center
   right: 20px;
   background: #2ECC71;
   color: #fff;
+}
+
+/* === WOBBLE ANIMATION === */
+@keyframes beamWobble {
+  0%, 100% { transform: rotate(-5deg); }
+  50%      { transform: rotate(5deg); }
 }
 
 /* === CAPTION === */

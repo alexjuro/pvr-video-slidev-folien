@@ -7,9 +7,7 @@
     </div>
 
     <!-- ===== CODE BLOCK ===== -->
-    <div class="memopt-code-wrap">
-      <pre class="memopt-code"><code><span class="memopt-var">weights</span><span class="memopt-hat-inline">^^</span><span class="memopt-op"> += </span><span class="memopt-var">learningRate</span><span class="memopt-op"> * </span><span class="memopt-var">gradients</span><span class="memopt-singlehat">^</span></code></pre>
-    </div>
+    <pre class="slidev-code"><code class="language-java">weights^^ += learningRate * gradients^</code></pre>
 
     <!-- ===== RAM / REGISTER VIS ===== -->
     <div class="memopt-ram">
@@ -79,8 +77,8 @@ onMounted(() => {
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #00e5ff;
-  text-shadow: 0 0 40px rgba(0,229,255,0.5), 0 0 80px rgba(0,229,255,0.2);
+  color: #b1c7f3;
+  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -88,49 +86,12 @@ onMounted(() => {
   font-size: 2rem;
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #ffa500;
-  text-shadow: 0 0 30px rgba(255,165,0,0.4);
+  color: #fea619;
+  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
 
-/* ===== CODE BLOCK ===== */
-.memopt-code-wrap {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.6rem 1.2rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
-  border-radius: 10px;
-  opacity: 0;
-  animation: mfadeIn 0.6s ease-out 0.3s both;
-}
-.memopt-code {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin: 0;
-}
-.memopt-var {
-  color: #ffd700;
-}
-.memopt-op {
-  color: #7ec8e3;
-}
-.memopt-hat-inline {
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: #39ff14;
-  text-shadow: 0 0 20px rgba(57,255,20,0.9), 0 0 40px rgba(57,255,20,0.5);
-  opacity: 0;
-  animation: mpopIn 0.4s ease-out 3.0s both, mpulse 1.0s ease-in-out 3.0s infinite;
-}
-.memopt-singlehat {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #7ec8e3;
-}
 
 /* ===== RAM ===== */
 .memopt-ram {
@@ -139,10 +100,10 @@ onMounted(() => {
   align-items: center;
   gap: 0.2rem;
   padding: 0.6rem 1.2rem 0.8rem;
-  background: linear-gradient(145deg,#1a1a2e,#16213e);
-  border: 2px solid #0f3460;
+  background: linear-gradient(145deg,#000f27,#0b2447);
+  border: 2px solid #32476c;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(0,229,255,0.06);
+  box-shadow: 0 0 30px rgba(177,199,243,0.06);
   opacity: 0;
   animation: mfadeIn 0.6s ease-out 0.6s both;
 }
@@ -150,7 +111,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.65rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.12em;
   margin-bottom: 0.2rem;
 }
@@ -161,8 +122,8 @@ onMounted(() => {
 .memopt-cell {
   width: 56px;
   padding: 0.3rem 0;
-  background: #0a0a1a;
-  border: 2px solid #0f3460;
+  background: #000f27;
+  border: 2px solid #32476c;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -171,21 +132,21 @@ onMounted(() => {
   transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
 }
 .memopt-cell-active {
-  border-color: #39ff14;
-  background: #0a1a0a;
-  box-shadow: 0 0 12px rgba(57,255,20,0.25);
+  border-color: #009d8d;
+  background: #00120f;
+  box-shadow: 0 0 12px rgba(0,157,141,0.25);
 }
 .memopt-cell-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #ffd700;
+  color: #fea619;
 }
 .memopt-cell-idx {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.45rem;
   font-weight: 600;
-  color: #3a5a7a;
+  color: #32476c;
 }
 .memopt-arrows-row {
   display: flex;
@@ -211,15 +172,15 @@ onMounted(() => {
 
 .memopt-arrow-down {
   font-size: 1rem;
-  color: #39ff14;
-  text-shadow: 0 0 12px rgba(57,255,20,0.6);
+  color: #009d8d;
+  text-shadow: 0 0 12px rgba(0,157,141,0.6);
   animation: mbounce 0.6s ease-in-out infinite alternate;
 }
 .memopt-arrow-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.45rem;
   font-weight: 800;
-  color: #39ff14;
+  color: #009d8d;
 }
 
 /* ===== WARNING ===== */
@@ -273,10 +234,6 @@ onMounted(() => {
   from { opacity: 0; transform: scale(0.7); }
   to   { opacity: 1; transform: scale(1); }
 }
-@keyframes mpulse {
-  0%,100% { transform: scale(1); opacity: 1; }
-  50%     { transform: scale(1.3); opacity: 0.8; }
-}
 @keyframes mwarnPulse {
   0%,100% { box-shadow: 0 0 30px rgba(255,51,51,0.3), 0 0 60px rgba(255,51,51,0.1); }
   50%     { box-shadow: 0 0 45px rgba(255,51,51,0.5), 0 0 80px rgba(255,51,51,0.2); }
@@ -284,5 +241,9 @@ onMounted(() => {
 @keyframes mbounce {
   from { transform: translateY(-2px); }
   to   { transform: translateY(4px); }
+}
+
+.slidev-code {
+  font-size: 1.3rem !important;
 }
 </style>

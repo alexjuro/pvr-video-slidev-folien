@@ -80,15 +80,15 @@
   font-size: 4rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #00e5ff;
-  text-shadow: 0 0 40px rgba(0,229,255,0.5), 0 0 80px rgba(0,229,255,0.2);
+  color: #b1c7f3;
+  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.25em;
   line-height: 1.1;
 }
 .avx-sub {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.15em;
   margin-top: 0.2rem;
 }
@@ -100,17 +100,17 @@
   align-items: center;
   gap: 0.3rem;
   padding: 0.8rem 1.5rem 1.2rem;
-  background: linear-gradient(145deg,#1a1a2e,#16213e);
-  border: 2px solid #0f3460;
+  background: linear-gradient(145deg,#000f27,#0b2447);
+  border: 2px solid #32476c;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(0,229,255,0.08);
+  box-shadow: 0 0 30px rgba(177,199,243,0.08);
   animation: avxFadeIn 0.6s ease-out 0.3s both;
 }
 .avx-reg-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.15em;
 }
 
@@ -131,7 +131,7 @@
 .avx-arr {
   font-size: 1.8rem;
   font-weight: 300;
-  color: #39ff14;
+  color: #009d8d;
   opacity: 0;
   transform: translateX(-30px);
   animation: avxFlyIn 0.5s ease-out forwards;
@@ -145,8 +145,8 @@
 .avx-cell {
   width: 80px;
   padding: 0.4rem 0;
-  background: #0a0a1a;
-  border: 2px solid #0f3460;
+  background: #000f27;
+  border: 2px solid #32476c;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -165,21 +165,21 @@
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ffd700;
-  text-shadow: 0 0 8px rgba(255,215,0,0.3);
+  color: #fea619;
+  text-shadow: 0 0 8px rgba(254,166,25,0.3);
 }
 .avx-type {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.5rem;
   font-weight: 600;
-  color: #5a7a9a;
+  color: #778cb5;
 }
 
 /* Slot gaps between lanes */
 .avx-slot {
   width: 4px;
   height: 70px;
-  background: #0f3460;
+  background: #32476c;
   opacity: 0.5;
   position: absolute;
   right: -4px;
@@ -199,8 +199,8 @@
 .avx-strike-arrow {
   font-size: 2.2rem;
   font-weight: 900;
-  color: #39ff14;
-  text-shadow: 0 0 25px rgba(57,255,20,0.8), 0 0 50px rgba(57,255,20,0.4);
+  color: #009d8d;
+  text-shadow: 0 0 25px rgba(0,157,141,0.8), 0 0 50px rgba(0,157,141,0.4);
   animation: avxPulse 1.2s ease-in-out infinite;
   line-height: 1;
 }
@@ -208,8 +208,8 @@
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.85rem;
   font-weight: 800;
-  color: #39ff14;
-  text-shadow: 0 0 15px rgba(57,255,20,0.4);
+  color: #009d8d;
+  text-shadow: 0 0 15px rgba(0,157,141,0.4);
   letter-spacing: 0.1em;
 }
 
@@ -218,8 +218,8 @@
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 1.4rem;
   font-weight: 900;
-  color: #39ff14;
-  text-shadow: 0 0 25px rgba(57,255,20,0.6), 0 0 50px rgba(57,255,20,0.3);
+  color: #009d8d;
+  text-shadow: 0 0 25px rgba(0,157,141,0.6), 0 0 50px rgba(0,157,141,0.3);
   letter-spacing: 0.05em;
   text-align: center;
   opacity: 0;

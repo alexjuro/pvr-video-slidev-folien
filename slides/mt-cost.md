@@ -7,11 +7,7 @@ layout: center
   <!-- LEFT: Code -->
   <div class="mtw-col">
     <div class="mtw-label">Code</div>
-    <div class="mtw-code">
-      <span class="mtw-kw">for</span><span class="mtw-punct">(</span><span class="mtw-var">elem</span><span class="mtw-punct">:</span><span class="mtw-var">elements</span><span class="mtw-punct">){</span>
-      <span class="mtw-fn">&nbsp;&nbsp;process</span><span class="mtw-punct">(</span><span class="mtw-var">elem</span><span class="mtw-punct">);</span>
-      <span class="mtw-punct">}</span>
-    </div>
+    <pre class="slidev-code"><code class="language-java">for(elem:elements){ process(elem); }</code></pre>
     <div class="mtw-arrow">&rarr;</div>
   </div>
 
@@ -74,31 +70,15 @@ layout: center
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #5a5a7a;
+  color: #74777f;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-/* Code box */
-.mtw-code {
-  padding: 0.7rem 1rem;
-  background: linear-gradient(145deg,#1a1a2e,#16213e);
-  border: 2px solid #0f3460;
-  border-radius: 10px;
-  box-shadow: 0 0 25px rgba(0,229,255,0.1);
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.9rem;
-  line-height: 1.8;
-  white-space: nowrap;
-}
-.mtw-kw { color: #ff79c6; font-weight: 700; }
-.mtw-punct { color: #5a5a7a; }
-.mtw-var { color: #e0e0e0; }
-.mtw-fn { color: #50fa7b; }
 
 .mtw-arrow {
   font-size: 1.3rem;
-  color: #00e5ff;
+  color: #b1c7f3;
   opacity: 0.4;
 }
 
@@ -141,7 +121,7 @@ layout: center
   height: 280px;
   margin-left: -40px;
   margin-top: -140px;
-  border: 2px dashed #0f3460;
+  border: 2px dashed #32476c;
   border-radius: 50%;
   opacity: 0.3;
   pointer-events: none;
@@ -204,10 +184,10 @@ layout: center
 /* CPU */
 .mtw-cpu {
   padding: 0.8rem;
-  background: linear-gradient(145deg,#1a1a2e,#16213e);
-  border: 2px solid #0f3460;
+  background: linear-gradient(145deg,#000f27,#0b2447);
+  border: 2px solid #32476c;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0,229,255,0.08);
+  box-shadow: 0 0 25px rgba(177,199,243,0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,9 +197,9 @@ layout: center
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.9rem;
   font-weight: 800;
-  color: #00e5ff;
+  color: #b1c7f3;
   letter-spacing: 0.2em;
-  text-shadow: 0 0 15px rgba(0,229,255,0.3);
+  text-shadow: 0 0 15px rgba(177,199,243,0.3);
 }
 .mtw-cores {
   display: grid;
@@ -228,13 +208,13 @@ layout: center
 }
 .mtw-core {
   padding: 0.3rem 0.5rem;
-  background: #0a0a1a;
-  border: 1px solid #0f3460;
+  background: #000f27;
+  border: 1px solid #32476c;
   border-radius: 6px;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.6rem;
   font-weight: 600;
-  color: #5a7a9a;
+  color: #778cb5;
   text-align: center;
 }
 
@@ -255,5 +235,9 @@ layout: center
   25%     { transform: rotate(0deg) scale(1.15); }
   50%     { transform: rotate(10deg) scale(1); }
   75%     { transform: rotate(0deg) scale(1.15); }
+}
+
+.slidev-code {
+  font-size: 1.3rem !important;
 }
 </style>

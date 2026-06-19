@@ -7,9 +7,7 @@
     </div>
 
     <!-- ===== CODE ===== -->
-    <div class="hscale-code-wrap">
-      <pre class="hscale-code"><code><span class="hs-lhs">y</span><span class="hs-op"> = sin(</span><span class="hs-var">weights</span><span class="hs-hat">^</span><span class="hs-op">)</span></code></pre>
-    </div>
+    <pre class="slidev-code"><code class="language-java">y = sin(weights^)</code></pre>
 
     <!-- ===== HARDWARE SWITCH ===== -->
     <div class="hscale-switch-area">
@@ -192,8 +190,8 @@ onMounted(() => {
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #00e5ff;
-  text-shadow: 0 0 40px rgba(0,229,255,0.5), 0 0 80px rgba(0,229,255,0.2);
+  color: #b1c7f3;
+  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -201,34 +199,10 @@ onMounted(() => {
   font-size: 2.5rem;
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #ffa500;
-  text-shadow: 0 0 30px rgba(255,165,0,0.4);
+  color: #fea619;
+  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.15em;
   margin-top: 0.1rem;
-}
-
-/* ===== CODE ===== */
-.hscale-code-wrap {
-  padding: 0.25rem 1rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
-  border-radius: 8px;
-  opacity: 0;
-  animation: hfadeIn 0.6s ease-out 0.3s both;
-}
-.hscale-code {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-}
-.hs-lhs { color: #ffd700; }
-.hs-op  { color: #7ec8e3; }
-.hs-var { color: #ffd700; }
-.hs-hat {
-  color: #39ff14;
-  font-weight: 900;
-  text-shadow: 0 0 12px rgba(57,255,20,0.6);
 }
 
 /* ===== SWITCH AREA ===== */
@@ -244,7 +218,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.5rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.15em;
 }
 
@@ -259,8 +233,8 @@ onMounted(() => {
   align-items: center;
   gap: 0.1rem;
   padding: 0.4rem 0.8rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
+  background: #000f27;
+  border: 2px solid #32476c;
   border-radius: 8px;
   cursor: pointer;
   transition: border-color 0.4s, background 0.4s, box-shadow 0.4s, transform 0.3s;
@@ -269,16 +243,16 @@ onMounted(() => {
   transform: translateY(-2px);
 }
 .hscale-option-active {
-  border-color: #39ff14;
-  background: #0a1a0a;
-  box-shadow: 0 0 20px rgba(57,255,20,0.15);
+  border-color: #009d8d;
+  background: #00120f;
+  box-shadow: 0 0 20px rgba(0,157,141,0.15);
 }
 .hscale-option-icon {
-  color: #5a7a9a;
+  color: #778cb5;
   transition: color 0.4s;
 }
 .hscale-option-active .hscale-option-icon {
-  color: #39ff14;
+  color: #009d8d;
 }
 .hscale-option-name {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -288,13 +262,13 @@ onMounted(() => {
   transition: color 0.4s;
 }
 .hscale-option-active .hscale-option-name {
-  color: #39ff14;
+  color: #009d8d;
 }
 .hscale-option-desc {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.45rem;
   font-weight: 600;
-  color: #5a7a9a;
+  color: #778cb5;
 }
 
 /* ---- Switch thumb ---- */
@@ -306,18 +280,18 @@ onMounted(() => {
 .hscale-switch-track {
   width: 200px;
   height: 6px;
-  background: #0f3460;
+  background: #32476c;
   border-radius: 3px;
   position: relative;
 }
 .hscale-switch-thumb {
   width: 50px;
   height: 12px;
-  background: #39ff14;
+  background: #009d8d;
   border-radius: 6px;
   position: absolute;
   top: -3px;
-  box-shadow: 0 0 12px rgba(57,255,20,0.4);
+  box-shadow: 0 0 12px rgba(0,157,141,0.4);
   transition: left 0.5s cubic-bezier(0.34,1.56,0.64,1);
 }
 .hscale-thumb-cpu   { left: 0; }
@@ -336,8 +310,8 @@ onMounted(() => {
   align-items: center;
   gap: 0.3rem;
   padding: 0.4rem 0.8rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
+  background: #000f27;
+  border: 2px solid #32476c;
   border-radius: 8px;
   opacity: 0;
   animation: hfadeIn 0.4s ease-out both;
@@ -346,7 +320,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.5rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.1em;
 }
 
@@ -359,8 +333,8 @@ onMounted(() => {
 .hscale-cpu-core {
   width: 20px;
   height: 20px;
-  background: #0a0a1a;
-  border: 1px solid #0f3460;
+  background: #000f27;
+  border: 1px solid #32476c;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -370,7 +344,7 @@ onMounted(() => {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #5a7a9a;
+  background: #778cb5;
 }
 
 /* ---- GPU grid ---- */
@@ -382,8 +356,8 @@ onMounted(() => {
 .hscale-gpu-core {
   width: 16px;
   height: 14px;
-  background: #0a0a1a;
-  border: 1px solid #0f3460;
+  background: #000f27;
+  border: 1px solid #32476c;
   border-radius: 2px;
   display: flex;
   align-items: center;
@@ -409,8 +383,8 @@ onMounted(() => {
 .hscale-node-box {
   width: 32px;
   padding: 0.2rem;
-  background: #0a0a1a;
-  border: 1px solid #0f3460;
+  background: #000f27;
+  border: 1px solid #32476c;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -424,7 +398,7 @@ onMounted(() => {
 .hscale-node-conn {
   width: 2px;
   height: 8px;
-  background: #0f3460;
+  background: #32476c;
 }
 
 /* ---- Flow row ---- */
@@ -437,10 +411,10 @@ onMounted(() => {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #39ff14;
+  background: #009d8d;
   opacity: 0;
   animation: hdotPulse 1.0s ease-in-out infinite;
-  box-shadow: 0 0 6px rgba(57,255,20,0.4);
+  box-shadow: 0 0 6px rgba(0,157,141,0.4);
 }
 .hscale-flow-dot:nth-child(1) { animation-delay: 0.0s; }
 .hscale-flow-dot:nth-child(2) { animation-delay: 0.15s; }
@@ -472,11 +446,11 @@ onMounted(() => {
   animation: hfadeIn 0.6s ease-out 2.2s both;
 }
 .hscale-motto-line {
-  color: #5a7a9a;
+  color: #778cb5;
 }
 .hscale-motto-em {
-  color: #39ff14;
-  text-shadow: 0 0 15px rgba(57,255,20,0.3);
+  color: #009d8d;
+  text-shadow: 0 0 15px rgba(0,157,141,0.3);
 }
 
 /* ===== TRANSITIONS ===== */
@@ -495,5 +469,9 @@ onMounted(() => {
 @keyframes hdotPulse {
   0%,100% { opacity: 0.3; transform: scale(0.8); }
   50%     { opacity: 1; transform: scale(1.2); }
+}
+
+.slidev-code {
+  font-size: 1.3rem !important;
 }
 </style>

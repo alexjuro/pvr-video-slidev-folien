@@ -31,15 +31,6 @@ layout: center
   justify-content: center;
 }
 
-/* === GLOW EFFECT === */
-.glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(52,152,219,0.45) 0%, rgba(52,152,219,0.1) 60%, transparent 100%);
-}
-
 .jvm-logo {
   position: relative;
   z-index: 1;

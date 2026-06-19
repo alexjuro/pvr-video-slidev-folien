@@ -166,8 +166,8 @@ onMounted(() => {
   font-size: 3rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #39ff14;
-  text-shadow: 0 0 40px rgba(57,255,20,0.5), 0 0 80px rgba(57,255,20,0.2);
+  color: #009d8d;
+  text-shadow: 0 0 40px rgba(0,157,141,0.5), 0 0 80px rgba(0,157,141,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -175,8 +175,8 @@ onMounted(() => {
   font-size: 1.8rem;
   font-weight: 700;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #ffd700;
-  text-shadow: 0 0 20px rgba(255,215,0,0.3);
+  color: #fea619;
+  text-shadow: 0 0 20px rgba(254,166,25,0.3);
   letter-spacing: 0.12em;
   margin-top: 0.05rem;
 }
@@ -194,10 +194,10 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
 }
 .summary-perf-label {
-  color: #ffd700;
+  color: #fea619;
 }
 .summary-big-arrow {
   display: flex;
@@ -207,12 +207,12 @@ onMounted(() => {
 .summary-arrow-body {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, #5a7a9a, #ffd700);
+  background: linear-gradient(90deg, #778cb5, #fea619);
   border-radius: 1px;
 }
 .summary-arrow-head {
   font-size: 1.2rem;
-  color: #ffd700;
+  color: #fea619;
 }
 
 /* ===== WORLDS ===== */
@@ -227,7 +227,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.5rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.1em;
 }
 
@@ -259,19 +259,19 @@ onMounted(() => {
   opacity: 1;
 }
 .summary-conc-label {
-  color: #39ff14;
+  color: #009d8d;
 }
 .summary-stream-wrap {
   position: relative;
   padding: 0.3rem 0.5rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
+  background: #000f27;
+  border: 2px solid #32476c;
   border-radius: 8px;
   transition: border-color 0.6s, box-shadow 0.6s;
 }
 .summary-conc-emerge .summary-stream-wrap {
-  border-color: #39ff14;
-  box-shadow: 0 0 25px rgba(57,255,20,0.1);
+  border-color: #009d8d;
+  box-shadow: 0 0 25px rgba(0,157,141,0.1);
 }
 
 /* ---- Stream line ---- */
@@ -281,13 +281,13 @@ onMounted(() => {
   left: 8%;
   width: 84%;
   height: 2px;
-  background: #0f3460;
+  background: #32476c;
   border-radius: 1px;
   z-index: 0;
 }
 .summary-stream-active {
-  background: linear-gradient(90deg, #39ff14, #00e5ff, #ffd700);
-  box-shadow: 0 0 12px rgba(57,255,20,0.3);
+  background: linear-gradient(90deg, #009d8d, #b1c7f3, #fea619);
+  box-shadow: 0 0 12px rgba(0,157,141,0.3);
 }
 .summary-stream-flow {
   position: absolute;
@@ -296,8 +296,8 @@ onMounted(() => {
   width: 12px;
   height: 8px;
   border-radius: 50%;
-  background: #39ff14;
-  box-shadow: 0 0 15px rgba(57,255,20,0.6);
+  background: #009d8d;
+  box-shadow: 0 0 15px rgba(0,157,141,0.6);
   animation: sstreamFlow 2.5s linear infinite;
 }
 
@@ -306,8 +306,8 @@ onMounted(() => {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #39ff14;
-  box-shadow: 0 0 10px rgba(57,255,20,0.5);
+  background: #009d8d;
+  box-shadow: 0 0 10px rgba(0,157,141,0.5);
   animation: sdotPulse 1.5s ease-in-out infinite;
 }
 
@@ -325,32 +325,32 @@ onMounted(() => {
   align-items: center;
   gap: 0.1rem;
   padding: 0.25rem 0.4rem;
-  background: #0a0a1a;
-  border: 1px solid #0f3460;
+  background: #000f27;
+  border: 1px solid #32476c;
   border-radius: 6px;
   transition: border-color 0.4s, background 0.4s, box-shadow 0.4s;
 }
 .summary-hw-lit {
-  border-color: #00e5ff;
-  background: #0a0a1a;
-  box-shadow: 0 0 15px rgba(0,229,255,0.15);
+  border-color: #b1c7f3;
+  background: #000f27;
+  box-shadow: 0 0 15px rgba(177,199,243,0.15);
 }
 .summary-hw-icon {
-  color: #5a7a9a;
+  color: #778cb5;
   transition: color 0.4s;
 }
 .summary-hw-lit .summary-hw-icon {
-  color: #00e5ff;
+  color: #b1c7f3;
 }
 .summary-hw-name {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.45rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   transition: color 0.4s;
 }
 .summary-hw-lit .summary-hw-name {
-  color: #00e5ff;
+  color: #b1c7f3;
 }
 
 /* ===== CHECKS ===== */
@@ -374,10 +374,10 @@ onMounted(() => {
 .sum-check:nth-child(2) { animation-delay: 4.2s; }
 .sum-check:nth-child(3) { animation-delay: 4.4s; }
 .sum-check-icon {
-  color: #39ff14;
+  color: #009d8d;
   font-weight: 900;
   font-size: 0.7rem;
-  text-shadow: 0 0 8px rgba(57,255,20,0.4);
+  text-shadow: 0 0 8px rgba(0,157,141,0.4);
 }
 
 /* ===== MOTTO ===== */
@@ -392,11 +392,11 @@ onMounted(() => {
   opacity: 1;
 }
 .summary-motto-code {
-  color: #5a7a9a;
+  color: #778cb5;
 }
 .summary-motto-em {
-  color: #39ff14;
-  text-shadow: 0 0 15px rgba(57,255,20,0.3);
+  color: #009d8d;
+  text-shadow: 0 0 15px rgba(0,157,141,0.3);
 }
 
 /* ===== FINAL BRAND ===== */
@@ -409,15 +409,15 @@ onMounted(() => {
 .summary-final-rule {
   width: 180px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #39ff14, transparent);
+  background: linear-gradient(90deg, transparent, #009d8d, transparent);
   margin-bottom: 0.15rem;
 }
 .summary-final-name {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 2.2rem;
   font-weight: 900;
-  color: #39ff14;
-  text-shadow: 0 0 40px rgba(57,255,20,0.6), 0 0 80px rgba(57,255,20,0.3), 0 0 120px rgba(57,255,20,0.1);
+  color: #009d8d;
+  text-shadow: 0 0 40px rgba(0,157,141,0.6), 0 0 80px rgba(0,157,141,0.3), 0 0 120px rgba(0,157,141,0.1);
   letter-spacing: 0.2em;
   animation: sglowPulse 2s ease-in-out infinite;
 }
@@ -425,7 +425,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.55rem;
   font-weight: 600;
-  color: #5a7a9a;
+  color: #778cb5;
   letter-spacing: 0.15em;
 }
 
@@ -465,7 +465,7 @@ onMounted(() => {
   to   { opacity: 1; transform: scale(1); }
 }
 @keyframes sglowPulse {
-  0%,100% { text-shadow: 0 0 40px rgba(57,255,20,0.6), 0 0 80px rgba(57,255,20,0.3); }
-  50%     { text-shadow: 0 0 60px rgba(57,255,20,0.8), 0 0 120px rgba(57,255,20,0.4); }
+  0%,100% { text-shadow: 0 0 40px rgba(0,157,141,0.6), 0 0 80px rgba(0,157,141,0.3); }
+  50%     { text-shadow: 0 0 60px rgba(0,157,141,0.8), 0 0 120px rgba(0,157,141,0.4); }
 }
 </style>

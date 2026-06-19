@@ -16,15 +16,9 @@ layout: center
     <span class="op-factor">normFactor = 2.0</span>
   </div>
 
-  <!-- === CODE BOX === -->
-  <div class="op-code">
-    <span class="op-v">normalizedWeights</span>
-    <span class="op-punct"> = </span>
-    <span class="op-v">weights</span>
-    <span class="op-caret">^</span>
-    <span class="op-punct"> / </span>
-    <span class="op-v">normFactor</span>
-  </div>
+```java
+normalizedWeights = weights ^ / normFactor
+```
 
   <div class="op-sub">Präziser Einzeiler</div>
 
@@ -85,8 +79,8 @@ layout: center
 .op-cell-mini {
   width: 48px;
   height: 34px;
-  background: linear-gradient(145deg, #1a1a2e, #16213e);
-  border: 1.5px solid #0f3460;
+  background: linear-gradient(145deg, #000f27, #0b2447);
+  border: 1.5px solid #32476c;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -94,11 +88,11 @@ layout: center
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.65rem;
   font-weight: 600;
-  color: #c0c0d0;
+  color: #778cb5;
 }
 
 .op-op {
-  color: #00e5ff;
+  color: #b1c7f3;
   font-size: 1.2rem;
   opacity: 0.5;
 }
@@ -106,49 +100,13 @@ layout: center
 .op-factor {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.65rem;
-  color: #39ff14;
-}
-
-/* === CODE BOX === */
-.op-code {
-  padding: 0.7rem 1.4rem;
-  background: linear-gradient(145deg, #1a1a2e, #16213e);
-  border: 2px solid #0f3460;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 0.15rem;
-  animation: opIn 0.5s ease-out both;
-}
-
-.op-v {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #e0e0e0;
-}
-
-.op-punct {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #5a5a7a;
-}
-
-.op-caret {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 1.45rem;
-  font-weight: 900;
-  color: #39ff14;
-  text-shadow: 0 0 20px rgba(57, 255, 20, 0.8), 0 0 40px rgba(57, 255, 20, 0.4);
-  animation: pulseGlow 1.5s ease-in-out infinite;
+  color: #009d8d;
 }
 
 .op-sub {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #5a5a7a;
+  color: #74777f;
   letter-spacing: 0.15em;
   animation: opIn 0.5s ease-out 0.3s both;
 }
@@ -177,16 +135,16 @@ layout: center
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #ffd700;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  color: #fea619;
+  text-shadow: 0 0 8px rgba(254, 166, 25, 0.3);
 }
 
 .op-beam-bar {
   width: 2px;
   height: 28px;
-  background: linear-gradient(to bottom, #39ff14, #00e5ff);
+  background: linear-gradient(to bottom, #009d8d, #b1c7f3);
   border-radius: 1px;
-  box-shadow: 0 0 6px rgba(57, 255, 20, 0.5);
+  box-shadow: 0 0 6px rgba(0, 157, 141, 0.5);
   animation: beamGrow 0.4s ease-out forwards;
   transform-origin: top center;
   transform: scaleY(0);
@@ -200,7 +158,7 @@ layout: center
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.6rem;
   font-weight: 600;
-  color: #39ff14;
+  color: #009d8d;
   opacity: 0.7;
 }
 
@@ -209,8 +167,8 @@ layout: center
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #00e5ff;
-  text-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+  color: #b1c7f3;
+  text-shadow: 0 0 15px rgba(177, 199, 243, 0.4);
   letter-spacing: 0.2em;
   opacity: 0;
   animation: opIn 0.8s ease-out 1.5s both;
@@ -222,12 +180,12 @@ layout: center
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes pulseGlow {
-  0%, 100% { text-shadow: 0 0 20px rgba(57, 255, 20, 0.8), 0 0 40px rgba(57, 255, 20, 0.4); }
-  50%      { text-shadow: 0 0 30px rgba(57, 255, 20, 1.0), 0 0 60px rgba(57, 255, 20, 0.6); }
-}
 
 @keyframes beamGrow {
   to { transform: scaleY(1); }
+}
+
+.slidev-code {
+  font-size: 1.5rem !important;
 }
 </style>

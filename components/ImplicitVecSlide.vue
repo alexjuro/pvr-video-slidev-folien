@@ -8,10 +8,10 @@
 
     <!-- sine wave background -->
     <svg class="iv-sine-bg" viewBox="0 0 600 120" preserveAspectRatio="none">
-      <path d="M0,60 Q75,0 150,60 T300,60 T450,60 T600,60" fill="none" stroke="#0f3460" stroke-width="1.5" opacity="0.15" />
-      <path d="M0,60 Q75,0 150,60 T300,60 T450,60 T600,60" fill="none" stroke="#0f3460" stroke-width="0.8" opacity="0.08"
+      <path d="M0,60 Q75,0 150,60 T300,60 T450,60 T600,60" fill="none" stroke="#32476c" stroke-width="1.5" opacity="0.15" />
+      <path d="M0,60 Q75,0 150,60 T300,60 T450,60 T600,60" fill="none" stroke="#32476c" stroke-width="0.8" opacity="0.08"
         transform="translate(0,15)" />
-      <path d="M0,60 Q75,0 150,60 T300,60 T450,60 T600,60" fill="none" stroke="#0f3460" stroke-width="0.8" opacity="0.08"
+      <path d="M0,60 Q75,0 150,60 T300,60 T450,60 T600,60" fill="none" stroke="#32476c" stroke-width="0.8" opacity="0.08"
         transform="translate(0,-15)" />
     </svg>
 
@@ -19,20 +19,16 @@
     <div class="iv-code-area">
       <!-- scalar (grayed out) -->
       <div class="iv-scalar">
-        <pre class="iv-code-line"><code><span class="iv-gray">y = sin(x)</span></code></pre>
+        <pre class="slidev-code"><code class="language-java">y = sin(x)</code></pre>
       </div>
 
       <!-- concurnas -->
-      <div class="iv-concurnas">
-        <pre class="iv-code-line"><code><span class="iv-lhs">y</span><span class="iv-op"> = sin(</span><span class="iv-var">weights</span><span class="iv-op">)</span></code></pre>
-      </div>
+      <pre class="slidev-code iv-code-main"><code class="language-java">y = sin(weights)</code></pre>
 
       <!-- compiler transpile line -->
       <Transition name="iv-fade">
-        <div v-if="phase >= 4" class="iv-transpile">
-          <pre class="iv-code-line iv-code-small"><code><span class="iv-comment">// Compiler transpiles to:</span>
-<span class="iv-lhs">y</span><span class="iv-op"> = sin(</span><span class="iv-var">weights</span><span class="iv-hat-inline">^</span><span class="iv-op">)</span></code></pre>
-        </div>
+        <pre v-if="phase >= 4" class="slidev-code iv-code-main"><code class="language-java">// Compiler transpiles to:
+y = sin(weights^)</code></pre>
       </Transition>
     </div>
 
@@ -119,8 +115,8 @@ onMounted(() => {
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #00e5ff;
-  text-shadow: 0 0 40px rgba(0,229,255,0.5), 0 0 80px rgba(0,229,255,0.2);
+  color: #b1c7f3;
+  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -128,8 +124,8 @@ onMounted(() => {
   font-size: 2rem;
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #ffa500;
-  text-shadow: 0 0 30px rgba(255,165,0,0.4);
+  color: #fea619;
+  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
@@ -139,49 +135,12 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.6rem;
   z-index: 1;
 }
 .iv-scalar {
   opacity: 0;
   animation: ivfadeIn 0.5s ease-out 0.3s both;
-}
-.iv-concurnas {
-  padding: 0.25rem 1rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
-  border-radius: 8px;
-  opacity: 0;
-  animation: ivfadeIn 0.6s ease-out 0.5s both;
-}
-.iv-code-line {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-}
-.iv-code-small {
-  font-size: 0.8rem;
-}
-.iv-gray { color: #3a5a5a; }
-.iv-lhs { color: #ffd700; }
-.iv-op  { color: #7ec8e3; }
-.iv-var { color: #ffd700; }
-.iv-comment { color: #3a5a5a; font-style: italic; }
-.iv-hat-inline {
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: #39ff14;
-  text-shadow: 0 0 15px rgba(57,255,20,0.8), 0 0 30px rgba(57,255,20,0.4);
-}
-
-/* transpile line */
-.iv-transpile {
-  padding: 0.2rem 0.8rem;
-  background: #0a1a0a;
-  border: 1px solid #39ff14;
-  border-radius: 6px;
-  box-shadow: 0 0 15px rgba(57,255,20,0.1);
 }
 
 /* ===== ARRAY ===== */
@@ -194,21 +153,21 @@ onMounted(() => {
   grid-template-columns: repeat(8, 34px);
   gap: 2px;
   padding: 0.3rem;
-  background: #1a1a2e;
-  border: 2px solid #0f3460;
+  background: #000f27;
+  border: 2px solid #32476c;
   border-radius: 8px;
   opacity: 0;
   animation: ivfadeIn 0.5s ease-out both;
 }
 .iv-array-flooded {
-  border-color: #39ff14;
-  box-shadow: 0 0 25px rgba(57,255,20,0.12);
+  border-color: #009d8d;
+  box-shadow: 0 0 25px rgba(0,157,141,0.12);
   transition: border-color 0.6s, box-shadow 0.6s;
 }
 .iv-cell {
   height: 26px;
-  background: #0a0a1a;
-  border: 1px solid #0f3460;
+  background: #000f27;
+  border: 1px solid #32476c;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -216,19 +175,19 @@ onMounted(() => {
   transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
 .iv-cell-changed {
-  background: #0a1a0a;
-  border-color: #39ff14;
-  box-shadow: 0 0 8px rgba(57,255,20,0.15);
+  background: #00120f;
+  border-color: #009d8d;
+  box-shadow: 0 0 8px rgba(0,157,141,0.15);
 }
 .iv-cell-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.5rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
   transition: color 0.4s;
 }
 .iv-cell-changed .iv-cell-val {
-  color: #39ff14;
+  color: #009d8d;
 }
 
 /* pulse line */
@@ -238,8 +197,8 @@ onMounted(() => {
   left: 0;
   width: 3px;
   height: 100%;
-  background: linear-gradient(180deg, #39ff14, transparent);
-  box-shadow: 0 0 15px rgba(57,255,20,0.5);
+  background: linear-gradient(180deg, #009d8d, transparent);
+  box-shadow: 0 0 15px rgba(0,157,141,0.5);
   animation: ivpulseSweep 0.8s ease-out 4.8s both;
 }
 
@@ -253,7 +212,7 @@ onMounted(() => {
 .iv-gear {
   font-size: 2rem;
   animation: ivspin 2s linear infinite;
-  filter: drop-shadow(0 0 10px rgba(0,229,255,0.4));
+  filter: drop-shadow(0 0 10px rgba(177,199,243,0.4));
 }
 
 /* ===== TRANSITIONS ===== */
@@ -293,5 +252,9 @@ onMounted(() => {
 @keyframes ivpulseSweep {
   from { transform: translateX(0); }
   to   { transform: translateX(290px); }
+}
+
+.slidev-code {
+  font-size: 1.3rem !important;
 }
 </style>

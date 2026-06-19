@@ -7,9 +7,7 @@
     </div>
 
     <!-- ===== CODE REMINDER ===== -->
-    <div class="chain-reminder">
-      <pre class="chain-code"><code><span class="cvar">weights</span><span class="chat">^^</span><span class="cop"> += </span><span class="cvar">learningRate</span><span class="cop"> * </span><span class="cvar">gradients</span><span class="csinglehat">^</span></code></pre>
-    </div>
+    <pre class="slidev-code"><code class="language-java">weights^^ += learningRate * gradients^</code></pre>
 
     <!-- ===== TWO PATHS ===== -->
     <div class="chain-paths">
@@ -113,8 +111,8 @@ onMounted(() => {
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #00e5ff;
-  text-shadow: 0 0 40px rgba(0,229,255,0.5), 0 0 80px rgba(0,229,255,0.2);
+  color: #b1c7f3;
+  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -122,31 +120,11 @@ onMounted(() => {
   font-size: 2rem;
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #ffa500;
-  text-shadow: 0 0 30px rgba(255,165,0,0.4);
+  color: #fea619;
+  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
-
-/* ===== CODE REMINDER ===== */
-.chain-reminder {
-  padding: 0.25rem 0.8rem;
-  background: #1a1a2e;
-  border: 1px solid #0f3460;
-  border-radius: 6px;
-  opacity: 0;
-  animation: cfadeIn 0.5s ease-out 0.3s both;
-}
-.chain-code {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0;
-}
-.cvar { color: #ffd700; }
-.chat { color: #39ff14; font-weight: 900; text-shadow: 0 0 10px rgba(57,255,20,0.5); }
-.cop { color: #7ec8e3; }
-.csinglehat { color: #7ec8e3; }
 
 /* ===== PATHS CONTAINER ===== */
 .chain-paths {
@@ -164,8 +142,8 @@ onMounted(() => {
   align-items: center;
   gap: 0.3rem;
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(145deg,#1a1a2e,#16213e);
-  border: 2px solid #0f3460;
+  background: linear-gradient(145deg,#000f27,#0b2447);
+  border: 2px solid #32476c;
   border-radius: 10px;
   opacity: 0;
   animation: cfadeIn 0.6s ease-out 0.6s both;
@@ -199,12 +177,12 @@ onMounted(() => {
   transition: opacity 0.6s;
 }
 .chain-op-sym {
-  color: #7ec8e3;
+  color: #b1c7f3;
   font-weight: 800;
   margin: 0 0.15rem;
 }
 .chain-arr {
-  color: #5a7a9a;
+  color: #778cb5;
   font-size: 1rem;
 }
 
@@ -254,19 +232,19 @@ onMounted(() => {
   align-items: center;
   gap: 0.3rem;
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(145deg,#1a2a1e,#16213e);
-  border: 2px solid #0f3460;
+  background: linear-gradient(145deg,#002a25,#0b2447);
+  border: 2px solid #32476c;
   border-radius: 10px;
   opacity: 0;
   animation: cfadeIn 0.6s ease-out 0.9s both;
   transition: border-color 0.8s, box-shadow 0.8s;
 }
 .chain-concurnas-emerge {
-  border-color: #39ff14;
-  box-shadow: 0 0 30px rgba(57,255,20,0.15), 0 0 60px rgba(57,255,20,0.05);
+  border-color: #009d8d;
+  box-shadow: 0 0 30px rgba(0,157,141,0.15), 0 0 60px rgba(0,157,141,0.05);
 }
 .chain-concurnas-label {
-  color: #39ff14;
+  color: #009d8d;
 }
 .chain-concurnas-flow {
   display: flex;
@@ -291,7 +269,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.5rem;
   font-weight: 700;
-  color: #5a7a9a;
+  color: #778cb5;
 }
 
 /* Arrows into gear */
@@ -313,10 +291,10 @@ onMounted(() => {
   animation-delay: 1.4s;
 }
 .chain-in-label {
-  color: #ffd700;
+  color: #fea619;
 }
 .chain-in-sym {
-  color: #39ff14;
+  color: #009d8d;
 }
 
 /* Fused step */
@@ -325,10 +303,10 @@ onMounted(() => {
   align-items: center;
   gap: 0.3rem;
   padding: 0.3rem 0.6rem;
-  background: #0a1a0a;
-  border: 2px solid #39ff14;
+  background: #00120f;
+  border: 2px solid #009d8d;
   border-radius: 8px;
-  box-shadow: 0 0 25px rgba(57,255,20,0.3), 0 0 50px rgba(57,255,20,0.1);
+  box-shadow: 0 0 25px rgba(0,157,141,0.3), 0 0 50px rgba(0,157,141,0.1);
 }
 .chain-fused-icon {
   font-size: 1.2rem;
@@ -338,7 +316,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
   font-weight: 800;
-  color: #39ff14;
+  color: #009d8d;
   letter-spacing: 0.05em;
 }
 
@@ -352,15 +330,15 @@ onMounted(() => {
 }
 .chain-beam-arr {
   font-size: 1.8rem;
-  color: #39ff14;
-  text-shadow: 0 0 20px rgba(57,255,20,0.6);
+  color: #009d8d;
+  text-shadow: 0 0 20px rgba(0,157,141,0.6);
   animation: cbeamPulse 0.8s ease-in-out infinite alternate;
 }
 .chain-beam-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.85rem;
   font-weight: 800;
-  color: #ffd700;
+  color: #fea619;
 }
 
 /* ===== PATH LABELS ===== */
@@ -413,5 +391,9 @@ onMounted(() => {
 @keyframes cbeamPulse {
   from { opacity: 0.7; }
   to   { opacity: 1; }
+}
+
+.slidev-code {
+  font-size: 1.3rem !important;
 }
 </style>
