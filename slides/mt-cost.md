@@ -6,9 +6,10 @@ layout: center
 
   <!-- LEFT: Code -->
   <div class="mtw-col">
-    <div class="mtw-label">Code</div>
-    <pre class="slidev-code"><code class="language-java">for(elem:elements){ process(elem); }</code></pre>
-    <div class="mtw-arrow">&rarr;</div>
+    <div class="mtw-code-row">
+      <pre class="slidev-code"><code class="language-java">for(elem:elements){ process(elem); }</code></pre>
+      <div class="mtw-arrow">&rarr;</div>
+    </div>
   </div>
 
   <!-- CENTER: Wall + Package -->
@@ -75,6 +76,12 @@ layout: center
   text-transform: uppercase;
 }
 
+
+.mtw-code-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
 
 .mtw-arrow {
   font-size: 1.3rem;
@@ -184,10 +191,9 @@ layout: center
 /* CPU */
 .mtw-cpu {
   padding: 0.8rem;
-  background: linear-gradient(145deg,#000f27,#0b2447);
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(177,199,243,0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,10 +202,9 @@ layout: center
 .mtw-cpu-head {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.9rem;
-  font-weight: 800;
-  color: #b1c7f3;
+  font-weight: 700;
+  color: #ffffff;
   letter-spacing: 0.2em;
-  text-shadow: 0 0 15px rgba(177,199,243,0.3);
 }
 .mtw-cores {
   display: grid;
@@ -209,12 +214,12 @@ layout: center
 .mtw-core {
   padding: 0.3rem 0.5rem;
   background: #000f27;
-  border: 1px solid #32476c;
+  border: 1.5px solid #32476c;
   border-radius: 6px;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.6rem;
-  font-weight: 600;
-  color: #778cb5;
+  font-weight: 700;
+  color: #fea619;
   text-align: center;
 }
 

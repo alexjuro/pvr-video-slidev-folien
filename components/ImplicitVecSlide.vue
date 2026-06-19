@@ -116,7 +116,6 @@ onMounted(() => {
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #b1c7f3;
-  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -125,7 +124,6 @@ onMounted(() => {
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
-  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
@@ -153,21 +151,20 @@ onMounted(() => {
   grid-template-columns: repeat(8, 34px);
   gap: 2px;
   padding: 0.3rem;
-  background: #000f27;
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 8px;
   opacity: 0;
   animation: ivfadeIn 0.5s ease-out both;
 }
 .iv-array-flooded {
   border-color: #009d8d;
-  box-shadow: 0 0 25px rgba(0,157,141,0.12);
-  transition: border-color 0.6s, box-shadow 0.6s;
+  transition: border-color 0.6s;
 }
 .iv-cell {
   height: 26px;
-  background: #000f27;
-  border: 1px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -177,13 +174,12 @@ onMounted(() => {
 .iv-cell-changed {
   background: #00120f;
   border-color: #009d8d;
-  box-shadow: 0 0 8px rgba(0,157,141,0.15);
 }
 .iv-cell-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.5rem;
   font-weight: 700;
-  color: #778cb5;
+  color: #ffffff;
   transition: color 0.4s;
 }
 .iv-cell-changed .iv-cell-val {
@@ -198,7 +194,6 @@ onMounted(() => {
   width: 3px;
   height: 100%;
   background: linear-gradient(180deg, #009d8d, transparent);
-  box-shadow: 0 0 15px rgba(0,157,141,0.5);
   animation: ivpulseSweep 0.8s ease-out 4.8s both;
 }
 
@@ -212,7 +207,6 @@ onMounted(() => {
 .iv-gear {
   font-size: 2rem;
   animation: ivspin 2s linear infinite;
-  filter: drop-shadow(0 0 10px rgba(177,199,243,0.4));
 }
 
 /* ===== TRANSITIONS ===== */

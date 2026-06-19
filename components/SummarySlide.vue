@@ -167,7 +167,6 @@ onMounted(() => {
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #009d8d;
-  text-shadow: 0 0 40px rgba(0,157,141,0.5), 0 0 80px rgba(0,157,141,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -176,7 +175,6 @@ onMounted(() => {
   font-weight: 700;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
-  text-shadow: 0 0 20px rgba(254,166,25,0.3);
   letter-spacing: 0.12em;
   margin-top: 0.05rem;
 }
@@ -264,14 +262,13 @@ onMounted(() => {
 .summary-stream-wrap {
   position: relative;
   padding: 0.3rem 0.5rem;
-  background: #000f27;
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 8px;
-  transition: border-color 0.6s, box-shadow 0.6s;
+  transition: border-color 0.6s;
 }
 .summary-conc-emerge .summary-stream-wrap {
   border-color: #009d8d;
-  box-shadow: 0 0 25px rgba(0,157,141,0.1);
 }
 
 /* ---- Stream line ---- */
@@ -287,7 +284,6 @@ onMounted(() => {
 }
 .summary-stream-active {
   background: linear-gradient(90deg, #009d8d, #b1c7f3, #fea619);
-  box-shadow: 0 0 12px rgba(0,157,141,0.3);
 }
 .summary-stream-flow {
   position: absolute;
@@ -297,7 +293,6 @@ onMounted(() => {
   height: 8px;
   border-radius: 50%;
   background: #009d8d;
-  box-shadow: 0 0 15px rgba(0,157,141,0.6);
   animation: sstreamFlow 2.5s linear infinite;
 }
 
@@ -307,7 +302,6 @@ onMounted(() => {
   height: 6px;
   border-radius: 50%;
   background: #009d8d;
-  box-shadow: 0 0 10px rgba(0,157,141,0.5);
   animation: sdotPulse 1.5s ease-in-out infinite;
 }
 
@@ -325,15 +319,14 @@ onMounted(() => {
   align-items: center;
   gap: 0.1rem;
   padding: 0.25rem 0.4rem;
-  background: #000f27;
-  border: 1px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 6px;
   transition: border-color 0.4s, background 0.4s, box-shadow 0.4s;
 }
 .summary-hw-lit {
   border-color: #b1c7f3;
   background: #000f27;
-  box-shadow: 0 0 15px rgba(177,199,243,0.15);
 }
 .summary-hw-icon {
   color: #778cb5;
@@ -377,7 +370,6 @@ onMounted(() => {
   color: #009d8d;
   font-weight: 900;
   font-size: 0.7rem;
-  text-shadow: 0 0 8px rgba(0,157,141,0.4);
 }
 
 /* ===== MOTTO ===== */
@@ -396,7 +388,6 @@ onMounted(() => {
 }
 .summary-motto-em {
   color: #009d8d;
-  text-shadow: 0 0 15px rgba(0,157,141,0.3);
 }
 
 /* ===== FINAL BRAND ===== */
@@ -417,7 +408,6 @@ onMounted(() => {
   font-size: 2.2rem;
   font-weight: 900;
   color: #009d8d;
-  text-shadow: 0 0 40px rgba(0,157,141,0.6), 0 0 80px rgba(0,157,141,0.3), 0 0 120px rgba(0,157,141,0.1);
   letter-spacing: 0.2em;
   animation: sglowPulse 2s ease-in-out infinite;
 }
@@ -465,7 +455,7 @@ onMounted(() => {
   to   { opacity: 1; transform: scale(1); }
 }
 @keyframes sglowPulse {
-  0%,100% { text-shadow: 0 0 40px rgba(0,157,141,0.6), 0 0 80px rgba(0,157,141,0.3); }
-  50%     { text-shadow: 0 0 60px rgba(0,157,141,0.8), 0 0 120px rgba(0,157,141,0.4); }
+  0%,100% { }
+  50%     { }
 }
 </style>

@@ -191,7 +191,6 @@ onMounted(() => {
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #b1c7f3;
-  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -200,7 +199,6 @@ onMounted(() => {
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
-  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.15em;
   margin-top: 0.1rem;
 }
@@ -233,8 +231,8 @@ onMounted(() => {
   align-items: center;
   gap: 0.1rem;
   padding: 0.4rem 0.8rem;
-  background: #000f27;
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 8px;
   cursor: pointer;
   transition: border-color 0.4s, background 0.4s, box-shadow 0.4s, transform 0.3s;
@@ -245,7 +243,6 @@ onMounted(() => {
 .hscale-option-active {
   border-color: #009d8d;
   background: #00120f;
-  box-shadow: 0 0 20px rgba(0,157,141,0.15);
 }
 .hscale-option-icon {
   color: #778cb5;
@@ -291,7 +288,6 @@ onMounted(() => {
   border-radius: 6px;
   position: absolute;
   top: -3px;
-  box-shadow: 0 0 12px rgba(0,157,141,0.4);
   transition: left 0.5s cubic-bezier(0.34,1.56,0.64,1);
 }
 .hscale-thumb-cpu   { left: 0; }
@@ -310,8 +306,8 @@ onMounted(() => {
   align-items: center;
   gap: 0.3rem;
   padding: 0.4rem 0.8rem;
-  background: #000f27;
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 8px;
   opacity: 0;
   animation: hfadeIn 0.4s ease-out both;
@@ -333,8 +329,8 @@ onMounted(() => {
 .hscale-cpu-core {
   width: 20px;
   height: 20px;
-  background: #000f27;
-  border: 1px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -356,8 +352,8 @@ onMounted(() => {
 .hscale-gpu-core {
   width: 16px;
   height: 14px;
-  background: #000f27;
-  border: 1px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 2px;
   display: flex;
   align-items: center;
@@ -383,8 +379,8 @@ onMounted(() => {
 .hscale-node-box {
   width: 32px;
   padding: 0.2rem;
-  background: #000f27;
-  border: 1px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -414,7 +410,6 @@ onMounted(() => {
   background: #009d8d;
   opacity: 0;
   animation: hdotPulse 1.0s ease-in-out infinite;
-  box-shadow: 0 0 6px rgba(0,157,141,0.4);
 }
 .hscale-flow-dot:nth-child(1) { animation-delay: 0.0s; }
 .hscale-flow-dot:nth-child(2) { animation-delay: 0.15s; }
@@ -450,7 +445,6 @@ onMounted(() => {
 }
 .hscale-motto-em {
   color: #009d8d;
-  text-shadow: 0 0 15px rgba(0,157,141,0.3);
 }
 
 /* ===== TRANSITIONS ===== */

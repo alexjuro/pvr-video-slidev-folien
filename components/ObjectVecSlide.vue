@@ -101,7 +101,6 @@ onMounted(() => {
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #b1c7f3;
-  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -110,7 +109,6 @@ onMounted(() => {
   font-weight:800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
-  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
@@ -154,8 +152,8 @@ onMounted(() => {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid #32476c;
-  background: #000f27;
+  border: 1.5px solid #32476c;
+  background: #0b2447;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +162,6 @@ onMounted(() => {
 .ovec-neuron-lit .ovec-neuron-ring {
   border-color: #fea619;
   background: #1a0a1a;
-  box-shadow: 0 0 15px rgba(254,166,25,0.25);
 }
 .ovec-neuron-dot {
   width: 8px;
@@ -175,7 +172,6 @@ onMounted(() => {
 }
 .ovec-neuron-lit .ovec-neuron-dot {
   background: #fea619;
-  box-shadow: 0 0 10px rgba(254,166,25,0.5);
 }
 .ovec-neuron-idx {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -193,7 +189,6 @@ onMounted(() => {
   font-size: 0.6rem;
   font-weight: 700;
   color: #009d8d;
-  text-shadow: 0 0 8px rgba(0,157,141,0.6);
   animation: oflyRight 0.5s ease-out forwards;
 }
 
@@ -254,8 +249,8 @@ onMounted(() => {
 .ovec-state-cell {
   width: 50px;
   height: 30px;
-  background: #000f27;
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -265,14 +260,12 @@ onMounted(() => {
 .ovec-state-filled {
   border-color: #009d8d;
   background: #00120f;
-  box-shadow: 0 0 12px rgba(0,157,141,0.2);
 }
 .ovec-state-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
   font-weight: 700;
   color: #009d8d;
-  text-shadow: 0 0 8px rgba(0,157,141,0.4);
   animation: opopIn 0.3s ease-out both;
 }
 

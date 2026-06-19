@@ -77,7 +77,6 @@ onMounted(() => {
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #b1c7f3;
-  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -86,7 +85,6 @@ onMounted(() => {
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
-  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
@@ -105,17 +103,16 @@ onMounted(() => {
   justify-content: space-between;
   width: 340px;
   padding: 0.5rem 1rem;
-  background: linear-gradient(145deg,#000f27,#0b2447);
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 8px;
   opacity: 0;
   animation: pfadeIn 0.5s ease-out both;
-  transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
+  transition: border-color 0.5s, background 0.5s;
 }
 .pup-layer-lit {
   border-color: #009d8d;
-  background: linear-gradient(145deg,#002a25,#0b2447);
-  box-shadow: 0 0 20px rgba(0,157,141,0.15);
+  background: #0b2447;
 }
 .pup-layer-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -144,7 +141,6 @@ onMounted(() => {
   font-size: 0.75rem;
   font-weight: 800;
   color: #fea619;
-  text-shadow: 0 0 10px rgba(254,166,25,0.4);
 }
 
 /* ===== BEAM ===== */
@@ -167,7 +163,6 @@ onMounted(() => {
 .pup-beam-arrow {
   font-size: 1rem;
   color: #009d8d;
-  text-shadow: 0 0 12px rgba(0,157,141,0.6);
   animation: pbeamBounce 0.5s ease-in-out infinite alternate;
 }
 

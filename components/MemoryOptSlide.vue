@@ -78,7 +78,6 @@ onMounted(() => {
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #b1c7f3;
-  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -87,7 +86,6 @@ onMounted(() => {
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
-  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
@@ -100,10 +98,9 @@ onMounted(() => {
   align-items: center;
   gap: 0.2rem;
   padding: 0.6rem 1.2rem 0.8rem;
-  background: linear-gradient(145deg,#000f27,#0b2447);
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(177,199,243,0.06);
   opacity: 0;
   animation: mfadeIn 0.6s ease-out 0.6s both;
 }
@@ -111,7 +108,7 @@ onMounted(() => {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.65rem;
   font-weight: 700;
-  color: #778cb5;
+  color: #fea619;
   letter-spacing: 0.12em;
   margin-bottom: 0.2rem;
 }
@@ -122,8 +119,8 @@ onMounted(() => {
 .memopt-cell {
   width: 56px;
   padding: 0.3rem 0;
-  background: #000f27;
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -134,13 +131,12 @@ onMounted(() => {
 .memopt-cell-active {
   border-color: #009d8d;
   background: #00120f;
-  box-shadow: 0 0 12px rgba(0,157,141,0.25);
 }
 .memopt-cell-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #fea619;
+  color: #ffffff;
 }
 .memopt-cell-idx {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -173,7 +169,6 @@ onMounted(() => {
 .memopt-arrow-down {
   font-size: 1rem;
   color: #009d8d;
-  text-shadow: 0 0 12px rgba(0,157,141,0.6);
   animation: mbounce 0.6s ease-in-out infinite alternate;
 }
 .memopt-arrow-label {

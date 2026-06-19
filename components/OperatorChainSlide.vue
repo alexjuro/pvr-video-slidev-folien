@@ -112,7 +112,6 @@ onMounted(() => {
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #b1c7f3;
-  text-shadow: 0 0 40px rgba(177,199,243,0.5), 0 0 80px rgba(177,199,243,0.2);
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -121,7 +120,6 @@ onMounted(() => {
   font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
-  text-shadow: 0 0 30px rgba(254,166,25,0.4);
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
 }
@@ -142,8 +140,8 @@ onMounted(() => {
   align-items: center;
   gap: 0.3rem;
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(145deg,#000f27,#0b2447);
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 10px;
   opacity: 0;
   animation: cfadeIn 0.6s ease-out 0.6s both;
@@ -196,8 +194,8 @@ onMounted(() => {
   background: #2a0a0a;
   border: 2px solid #ff3333;
   border-radius: 6px;
-  box-shadow: 0 0 20px rgba(255,51,51,0.3);
 }
+
 .chain-temp-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
@@ -220,8 +218,8 @@ onMounted(() => {
   height: 3px;
   background: #ff3333;
   border-radius: 2px;
-  box-shadow: 0 0 12px rgba(255,51,51,0.6);
 }
+
 .chain-x-a { transform: rotate(45deg); }
 .chain-x-b { transform: rotate(-45deg); }
 
@@ -232,16 +230,15 @@ onMounted(() => {
   align-items: center;
   gap: 0.3rem;
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(145deg,#002a25,#0b2447);
-  border: 2px solid #32476c;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
   border-radius: 10px;
   opacity: 0;
   animation: cfadeIn 0.6s ease-out 0.9s both;
-  transition: border-color 0.8s, box-shadow 0.8s;
+  transition: border-color 0.8s;
 }
 .chain-concurnas-emerge {
   border-color: #009d8d;
-  box-shadow: 0 0 30px rgba(0,157,141,0.15), 0 0 60px rgba(0,157,141,0.05);
 }
 .chain-concurnas-label {
   color: #009d8d;
@@ -306,8 +303,8 @@ onMounted(() => {
   background: #00120f;
   border: 2px solid #009d8d;
   border-radius: 8px;
-  box-shadow: 0 0 25px rgba(0,157,141,0.3), 0 0 50px rgba(0,157,141,0.1);
 }
+
 .chain-fused-icon {
   font-size: 1.2rem;
   animation: cflash 0.8s ease-in-out infinite alternate;
@@ -331,7 +328,6 @@ onMounted(() => {
 .chain-beam-arr {
   font-size: 1.8rem;
   color: #009d8d;
-  text-shadow: 0 0 20px rgba(0,157,141,0.6);
   animation: cbeamPulse 0.8s ease-in-out infinite alternate;
 }
 .chain-beam-label {
