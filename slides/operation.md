@@ -79,7 +79,7 @@ normalizedWeights = weights ^ / normFactor
 .op-cell-mini {
   width: 48px;
   height: 34px;
-  background: linear-gradient(145deg, #000f27, #0b2447);
+  background: #0b2447;
   border: 1.5px solid #32476c;
   border-radius: 4px;
   display: flex;
@@ -87,8 +87,8 @@ normalizedWeights = weights ^ / normFactor
   justify-content: center;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.65rem;
-  font-weight: 600;
-  color: #778cb5;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .op-op {
@@ -100,6 +100,7 @@ normalizedWeights = weights ^ / normFactor
 .op-factor {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.65rem;
+  font-weight: 700;
   color: #009d8d;
 }
 
@@ -132,11 +133,18 @@ normalizedWeights = weights ^ / normFactor
 .op-beam:nth-child(4) { animation-delay: 0.95s; }
 
 .op-beam-cell {
+  width: 56px;
+  height: 40px;
+  background: #0b2447;
+  border: 1.5px solid #32476c;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #fea619;
-  text-shadow: 0 0 8px rgba(254, 166, 25, 0.3);
+  color: #ffffff;
 }
 
 .op-beam-bar {
@@ -144,7 +152,6 @@ normalizedWeights = weights ^ / normFactor
   height: 28px;
   background: linear-gradient(to bottom, #009d8d, #b1c7f3);
   border-radius: 1px;
-  box-shadow: 0 0 6px rgba(0, 157, 141, 0.5);
   animation: beamGrow 0.4s ease-out forwards;
   transform-origin: top center;
   transform: scaleY(0);
@@ -168,7 +175,6 @@ normalizedWeights = weights ^ / normFactor
   font-size: 0.85rem;
   font-weight: 700;
   color: #b1c7f3;
-  text-shadow: 0 0 15px rgba(177, 199, 243, 0.4);
   letter-spacing: 0.2em;
   opacity: 0;
   animation: opIn 0.8s ease-out 1.5s both;
