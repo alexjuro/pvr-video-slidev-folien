@@ -1,8 +1,8 @@
 html, body, #slidev-app {
-  background: #F5F2EB !important;
+  background: #FFFDF7 !important;
 }
 .slidev-page {
-  background: #F5F2EB !important;
+  background: #FFFDF7 !important;
 }
 
 .slidev-page::before {
