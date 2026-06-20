@@ -97,8 +97,9 @@ layout: center
 .label {
   position: absolute;
   top: -36px;
-  padding: 5px 18px;
-  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
   font-weight: 700;
   border-radius: 16px;
   letter-spacing: 0.5px;
@@ -128,8 +129,9 @@ layout: center
 .caption {
   margin-top: 1rem;
   text-align: center;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   color: #74777f;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-style: italic;
 }
 </style>

@@ -39,17 +39,19 @@ layout: center
 }
 
 .subtitle {
-  font-size: 2.4rem;
-  color: #2c3e50;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 2.8rem;
+  color: #191c1e;
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .tagline {
-  font-size: 1.3rem;
-  color: #e67e22;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #fea619;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .ref {

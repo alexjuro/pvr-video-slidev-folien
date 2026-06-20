@@ -36,17 +36,19 @@ layout: center
 }
 
 .name {
-  font-size: 2.4rem;
-  margin: 0 0 0.25rem;
-  color: #2c3e50;
-  font-weight: 700;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 2.8rem;
+  margin: 0 0 0.5rem;
+  color: #191c1e;
+  font-weight: 900;
 }
 
 .role {
-  font-size: 1.3rem;
-  color: #e67e22;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #fea619;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .ref {

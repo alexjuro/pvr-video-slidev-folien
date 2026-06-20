@@ -18,17 +18,19 @@ layout: center
 
 /* === TYPOGRAPHY === */
 .title {
-  font-size: 3.2rem;
-  color: #2c3e50;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 2.8rem;
+  color: #191c1e;
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .subtitle {
-  font-size: 1.4rem;
-  color: #7f8c8d;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #778cb5;
   margin: 0.25rem 0 0;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
