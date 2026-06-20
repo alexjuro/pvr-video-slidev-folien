@@ -6,7 +6,9 @@
     </div>
 
     <!-- ===== CODE REMINDER ===== -->
-    <pre class="slidev-code"><code class="language-java">weights^^ += learningRate * gradients^</code></pre>
+    <pre
+      class="slidev-code"
+    ><code class="language-java">weights^^ += learningRate * gradients^</code></pre>
 
     <!-- ===== TWO PATHS ===== -->
     <div class="chain-paths">
@@ -72,10 +74,12 @@
       </div>
     </div>
   </div>
+
+  <!-- REFERENCE -->
+  <span class="ref">[4]</span>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
 .chain {
@@ -95,7 +99,7 @@
 .chain-title {
   font-size: 2.8rem;
   font-weight: 900;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   color: #b1c7f3;
   letter-spacing: 0.08em;
   line-height: 1.1;
@@ -103,7 +107,7 @@
 .chain-subtitle {
   font-size: 2rem;
   font-weight: 800;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   color: #fea619;
   letter-spacing: 0.12em;
   margin-top: 0.1rem;
@@ -130,7 +134,9 @@
   border-radius: 10px;
   opacity: 0;
   animation: cfadeIn 0.6s ease-out 0.6s both;
-  transition: opacity 0.8s, border-color 0.8s;
+  transition:
+    opacity 0.8s,
+    border-color 0.8s;
 }
 .chain-paths:has(.chain-temp-x:not(.slidev-vclick-hidden)) .chain-naive {
   opacity: 0.25;
@@ -150,7 +156,7 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.85rem;
   font-weight: 600;
   color: #ccc;
@@ -182,7 +188,7 @@
   animation: cpopIn 0.4s ease-out both;
 }
 .chain-temp-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.7rem;
   font-weight: 800;
   color: #ff5555;
@@ -205,8 +211,12 @@
   background: #ff3333;
   border-radius: 2px;
 }
-.chain-x-a { transform: rotate(45deg); }
-.chain-x-b { transform: rotate(-45deg); }
+.chain-x-a {
+  transform: rotate(45deg);
+}
+.chain-x-b {
+  transform: rotate(-45deg);
+}
 
 /* ===== CONCURNAS PATH ===== */
 .chain-concurnas {
@@ -248,7 +258,7 @@
   animation: cspin 3s linear infinite;
 }
 .chain-gear-text {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.5rem;
   font-weight: 700;
   color: #778cb5;
@@ -264,7 +274,7 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.7rem;
   font-weight: 600;
   animation: cfadeIn 0.5s ease-out 1.2s both;
@@ -295,7 +305,7 @@
   animation: cflash 0.8s ease-in-out infinite alternate;
 }
 .chain-fused-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.7rem;
   font-weight: 800;
   color: #009d8d;
@@ -314,7 +324,7 @@
   color: #009d8d;
 }
 .chain-beam-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.85rem;
   font-weight: 800;
   color: #fea619;
@@ -322,28 +332,58 @@
 
 /* ===== PATH LABELS ===== */
 .chain-path-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
 
 /* ===== KEYFRAMES ===== */
+.ref {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
 @keyframes cfadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes cpopIn {
-  from { opacity: 0; transform: scale(0.6); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 @keyframes cspin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 @keyframes cflash {
-  from { opacity: 0.7; transform: scale(1); }
-  to   { opacity: 1; transform: scale(1.15); }
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
 }
 
 .slidev-code {

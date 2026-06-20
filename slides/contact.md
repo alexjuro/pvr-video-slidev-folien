@@ -4,7 +4,7 @@ layout: center
 
 <div class="contact-slide">
   <div class="contact-photo">
-    <img src="/assets/jason.png" class="contact-img" />
+    <img src="/assets/lesnjak.png" class="contact-img" />
   </div>
   <div class="contact-info">
     <h2 class="contact-heading">Kontakt</h2>

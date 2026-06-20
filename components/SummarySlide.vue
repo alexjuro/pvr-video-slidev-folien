@@ -73,6 +73,9 @@
       <div class="summary-final-name">Concurnas</div>
     </div>
   </div>
+
+  <!-- REFERENCE -->
+  <span class="ref">[4]</span>
 </template>
 
 <script setup>
@@ -366,6 +369,14 @@
 }
 
 /* ===== KEYFRAMES ===== */
+.ref {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
 @keyframes sfadeIn {
   from {
     opacity: 0;

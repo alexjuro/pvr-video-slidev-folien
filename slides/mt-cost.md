@@ -47,6 +47,8 @@ layout: center
 
 </div>
 
+<span class="ref">[3, 4]</span>
+
 <style>
 .mtw {
   display: flex;
@@ -243,6 +245,14 @@ layout: center
   25%     { transform: rotate(0deg) scale(1.15); }
   50%     { transform: rotate(10deg) scale(1); }
   75%     { transform: rotate(0deg) scale(1.15); }
+}
+
+.ref {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
 }
 
 .slidev-code {

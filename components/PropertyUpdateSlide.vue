@@ -30,6 +30,9 @@
       </div>
     </div>
   </div>
+
+  <!-- REFERENCE -->
+  <span class="ref">[4]</span>
 </template>
 
 <script setup>
@@ -150,6 +153,14 @@ const layers = [
 }
 
 /* ===== KEYFRAMES ===== */
+.ref {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
 @keyframes pfadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }

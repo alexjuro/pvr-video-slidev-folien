@@ -8,11 +8,19 @@ layout: default
   <table class="sources-table">
     <tr>
       <td class="sources-nr"><strong>[1]</strong></td>
-      <td><a href="https://concurnas.com/" target="_blank">concurnas.com</a> – offizielle Webseite von Concurnas</td>
+      <td>Concurnas. <em>Concurnas</em> [Computer software]. Available: https://concurnas.com/</td>
     </tr>
     <tr>
       <td class="sources-nr"><strong>[2]</strong></td>
-      <td><a href="https://www.java.com/" target="_blank">java.com</a> – offizielle Webseite von Java</td>
+      <td>Oracle. <em>Java</em> [Computer software]. Available: https://www.java.com/</td>
+    </tr>
+    <tr>
+      <td class="sources-nr"><strong>[3]</strong></td>
+      <td>J. L. Hennessy and D. A. Patterson, <em>Computer Architecture: A Quantitative Approach</em>, 5th ed. Waltham, MA: Morgan Kaufmann, 2011.</td>
+    </tr>
+    <tr>
+      <td class="sources-nr"><strong>[4]</strong></td>
+      <td>Concurnas Ltd. <em>Concurnas Language Reference</em> [Online]. Available: https://concurnas.com/docs/manual</td>
     </tr>
   </table>
 </div>

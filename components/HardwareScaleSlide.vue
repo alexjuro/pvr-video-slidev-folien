@@ -1,7 +1,9 @@
 <template>
   <div class="hscale">
     <!-- ===== STEP 1: CODE ===== -->
-    <pre class="slidev-code"><code class="language-java">y = sin(weights^)</code></pre>
+    <pre
+      class="slidev-code"
+    ><code class="language-java">y = sin(weights^)</code></pre>
 
     <!-- ===== STEP 2: CONTENT ===== -->
     <div v-click="1" class="hscale-content">
@@ -19,12 +21,58 @@
           >
             <div class="hscale-option-icon">
               <svg viewBox="0 0 40 40" width="32" height="32">
-                <rect x="4" y="4" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                <rect x="12" y="12" width="16" height="16" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"/>
-                <line x1="20" y1="4" x2="20" y2="0" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="20" y1="40" x2="20" y2="36" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="4" y1="20" x2="0" y2="20" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="40" y1="20" x2="36" y2="20" stroke="currentColor" stroke-width="1.5"/>
+                <rect
+                  x="4"
+                  y="4"
+                  width="32"
+                  height="32"
+                  rx="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <rect
+                  x="12"
+                  y="12"
+                  width="16"
+                  height="16"
+                  rx="1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
+                <line
+                  x1="20"
+                  y1="4"
+                  x2="20"
+                  y2="0"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="20"
+                  y1="40"
+                  x2="20"
+                  y2="36"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="4"
+                  y1="20"
+                  x2="0"
+                  y2="20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="40"
+                  y1="20"
+                  x2="36"
+                  y2="20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
               </svg>
             </div>
             <div class="hscale-option-name">CPU</div>
@@ -38,10 +86,44 @@
           >
             <div class="hscale-option-icon">
               <svg viewBox="0 0 50 34" width="32" height="32">
-                <rect x="2" y="2" width="46" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
-                <rect x="14" y="8" width="26" height="18" rx="1" fill="none" stroke="currentColor" stroke-width="1"/>
-                <rect x="4" y="10" width="6" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1"/>
-                <line x1="25" y1="2" x2="25" y2="0" stroke="currentColor" stroke-width="1.2"/>
+                <rect
+                  x="2"
+                  y="2"
+                  width="46"
+                  height="30"
+                  rx="3"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <rect
+                  x="14"
+                  y="8"
+                  width="26"
+                  height="18"
+                  rx="1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
+                <rect
+                  x="4"
+                  y="10"
+                  width="6"
+                  height="14"
+                  rx="1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
+                <line
+                  x1="25"
+                  y1="2"
+                  x2="25"
+                  y2="0"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
               </svg>
             </div>
             <div class="hscale-option-name">GPU</div>
@@ -55,20 +137,142 @@
           >
             <div class="hscale-option-icon">
               <svg viewBox="0 0 44 30" width="32" height="32">
-                <rect x="2" y="2" width="12" height="26" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="4" y="5" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="4" y="11" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="4" y="17" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="16" y="2" width="12" height="26" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="18" y="5" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="18" y="11" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="18" y="17" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="30" y="2" width="12" height="26" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="32" y="5" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="32" y="11" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <rect x="32" y="17" width="8" height="3" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
-                <line x1="14" y1="15" x2="16" y2="15" stroke="currentColor" stroke-width="1"/>
-                <line x1="28" y1="15" x2="30" y2="15" stroke="currentColor" stroke-width="1"/>
+                <rect
+                  x="2"
+                  y="2"
+                  width="12"
+                  height="26"
+                  rx="2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="4"
+                  y="5"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="4"
+                  y="11"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="4"
+                  y="17"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="16"
+                  y="2"
+                  width="12"
+                  height="26"
+                  rx="2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="18"
+                  y="5"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="18"
+                  y="11"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="18"
+                  y="17"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="30"
+                  y="2"
+                  width="12"
+                  height="26"
+                  rx="2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="32"
+                  y="5"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="32"
+                  y="11"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <rect
+                  x="32"
+                  y="17"
+                  width="8"
+                  height="3"
+                  rx="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                />
+                <line
+                  x1="14"
+                  y1="15"
+                  x2="16"
+                  y2="15"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
+                <line
+                  x1="28"
+                  y1="15"
+                  x2="30"
+                  y2="15"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
               </svg>
             </div>
             <div class="hscale-option-name">Cloud</div>
@@ -78,7 +282,10 @@
 
         <div class="hscale-switch-bar">
           <div class="hscale-switch-track">
-            <div class="hscale-switch-thumb" :class="`hscale-thumb-${activeTarget}`"></div>
+            <div
+              class="hscale-switch-thumb"
+              :class="`hscale-thumb-${activeTarget}`"
+            ></div>
           </div>
         </div>
       </div>
@@ -98,7 +305,11 @@
             </div>
           </div>
 
-          <div v-else-if="activeTarget === 'gpu'" key="gpu" class="hscale-vis-panel">
+          <div
+            v-else-if="activeTarget === 'gpu'"
+            key="gpu"
+            class="hscale-vis-panel"
+          >
             <div class="hscale-vis-label">Massive Parallelität</div>
             <div class="hscale-gpu-grid">
               <div v-for="i in 32" :key="i" class="hscale-gpu-core">
@@ -135,33 +346,40 @@
     <div v-click="2" class="hscale-step2"></div>
     <div v-click="3" class="hscale-step3"></div>
   </div>
+
+  <!-- REFERENCE -->
+  <span class="ref">[1, 4]</span>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
-const activeTarget = ref('cpu')
+const activeTarget = ref("cpu");
 
 function switchTo(target) {
-  activeTarget.value = target
+  activeTarget.value = target;
 }
 
 onMounted(() => {
-  const root = document.querySelector('.hscale')
-  if (!root) return
+  const root = document.querySelector(".hscale");
+  if (!root) return;
   const obs = new MutationObserver(() => {
-    const s2 = root.querySelector('.hscale-step2')
-    const s3 = root.querySelector('.hscale-step3')
-    if (s3 && !s3.classList.contains('slidev-vclick-hidden')) {
-      activeTarget.value = 'cloud'
-    } else if (s2 && !s2.classList.contains('slidev-vclick-hidden')) {
-      activeTarget.value = 'gpu'
+    const s2 = root.querySelector(".hscale-step2");
+    const s3 = root.querySelector(".hscale-step3");
+    if (s3 && !s3.classList.contains("slidev-vclick-hidden")) {
+      activeTarget.value = "cloud";
+    } else if (s2 && !s2.classList.contains("slidev-vclick-hidden")) {
+      activeTarget.value = "gpu";
     } else {
-      activeTarget.value = 'cpu'
+      activeTarget.value = "cpu";
     }
-  })
-  obs.observe(root, { subtree: true, attributes: true, attributeFilter: ['class'] })
-})
+  });
+  obs.observe(root, {
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+});
 </script>
 
 <style scoped>
@@ -194,7 +412,7 @@ onMounted(() => {
   animation: hfadeIn 0.5s ease-out 0.6s both;
 }
 .hscale-switch-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.5rem;
   font-weight: 700;
   color: #778cb5;
@@ -219,7 +437,11 @@ onMounted(() => {
   border: 1.5px solid #32476c;
   border-radius: 8px;
   cursor: pointer;
-  transition: border-color 0.4s, background 0.4s, box-shadow 0.4s, transform 0.3s;
+  transition:
+    border-color 0.4s,
+    background 0.4s,
+    box-shadow 0.4s,
+    transform 0.3s;
 }
 .hscale-option:hover {
   transform: translateY(-2px);
@@ -236,7 +458,7 @@ onMounted(() => {
   color: #009d8d;
 }
 .hscale-option-name {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.7rem;
   font-weight: 800;
   color: #ccc;
@@ -247,7 +469,7 @@ onMounted(() => {
   color: #009d8d;
 }
 .hscale-option-desc {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.45rem;
   font-weight: 600;
   color: #778cb5;
@@ -274,11 +496,17 @@ onMounted(() => {
   border-radius: 6px;
   position: absolute;
   top: -3px;
-  transition: left 0.5s cubic-bezier(0.34,1.56,0.64,1);
+  transition: left 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.hscale-thumb-cpu   { left: 0; }
-.hscale-thumb-gpu   { left: 75px; }
-.hscale-thumb-cloud { left: 150px; }
+.hscale-thumb-cpu {
+  left: 0;
+}
+.hscale-thumb-gpu {
+  left: 75px;
+}
+.hscale-thumb-cloud {
+  left: 150px;
+}
 
 /* ===== VIS PANELS ===== */
 .hscale-vis {
@@ -303,7 +531,7 @@ onMounted(() => {
   animation: hfadeIn 0.4s ease-out both;
 }
 .hscale-vis-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.5rem;
   font-weight: 700;
   color: #778cb5;
@@ -399,20 +627,44 @@ onMounted(() => {
   border-radius: 50%;
   background: #009d8d;
   opacity: 0;
-  animation: hdotPulse 1.0s ease-in-out infinite;
+  animation: hdotPulse 1s ease-in-out infinite;
 }
-.hscale-flow-dot:nth-child(1) { animation-delay: 0.0s; }
-.hscale-flow-dot:nth-child(2) { animation-delay: 0.15s; }
-.hscale-flow-dot:nth-child(3) { animation-delay: 0.3s; }
-.hscale-flow-dot:nth-child(4) { animation-delay: 0.45s; }
-.hscale-flow-dot:nth-child(5) { animation-delay: 0.6s; }
-.hscale-flow-dot:nth-child(6) { animation-delay: 0.75s; }
-.hscale-flow-dot:nth-child(7) { animation-delay: 0.9s; }
-.hscale-flow-dot:nth-child(8) { animation-delay: 1.05s; }
-.hscale-flow-dot:nth-child(9) { animation-delay: 1.2s; }
-.hscale-flow-dot:nth-child(10) { animation-delay: 1.35s; }
-.hscale-flow-dot:nth-child(11) { animation-delay: 1.5s; }
-.hscale-flow-dot:nth-child(12) { animation-delay: 1.65s; }
+.hscale-flow-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.hscale-flow-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.hscale-flow-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.hscale-flow-dot:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.hscale-flow-dot:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.hscale-flow-dot:nth-child(6) {
+  animation-delay: 0.75s;
+}
+.hscale-flow-dot:nth-child(7) {
+  animation-delay: 0.9s;
+}
+.hscale-flow-dot:nth-child(8) {
+  animation-delay: 1.05s;
+}
+.hscale-flow-dot:nth-child(9) {
+  animation-delay: 1.2s;
+}
+.hscale-flow-dot:nth-child(10) {
+  animation-delay: 1.35s;
+}
+.hscale-flow-dot:nth-child(11) {
+  animation-delay: 1.5s;
+}
+.hscale-flow-dot:nth-child(12) {
+  animation-delay: 1.65s;
+}
 .hscale-flow-wide {
   gap: 0.15rem;
 }
@@ -422,7 +674,7 @@ onMounted(() => {
 
 /* ===== BOTTOM LABEL ===== */
 .hscale-bottom-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.65rem;
   font-weight: 700;
   color: #74777f;
@@ -440,13 +692,34 @@ onMounted(() => {
 }
 
 /* ===== KEYFRAMES ===== */
+.ref {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
 @keyframes hfadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes hdotPulse {
-  0%,100% { opacity: 0.3; transform: scale(0.8); }
-  50%     { opacity: 1; transform: scale(1.2); }
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 .slidev-code {

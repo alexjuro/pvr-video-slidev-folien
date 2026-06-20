@@ -57,6 +57,9 @@
       <!-- CONCLUSION -->
       <div class="avx-fazit">100% Hardware · 0% OS-Overhead</div>
     </div>
+
+    <!-- REFERENCE -->
+    <span class="ref">[3]</span>
   </div>
 </template>
 
@@ -77,7 +80,7 @@
 .avx-title {
   font-size: 4rem;
   font-weight: 900;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   color: #b1c7f3;
   letter-spacing: 0.25em;
   line-height: 1.1;
@@ -103,7 +106,7 @@
   animation: avxFadeIn 0.6s ease-out 0.3s both;
 }
 .avx-reg-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.7rem;
   font-weight: 700;
   color: #fea619;
@@ -131,10 +134,18 @@
   transform: translateX(30px);
   animation: avxFlyIn 0.5s ease-out forwards;
 }
-.avx-lane:nth-child(4) .avx-arr { animation-delay: 0.8s; }
-.avx-lane:nth-child(3) .avx-arr { animation-delay: 0.9s; }
-.avx-lane:nth-child(2) .avx-arr { animation-delay: 1.0s; }
-.avx-lane:nth-child(1) .avx-arr { animation-delay: 1.1s; }
+.avx-lane:nth-child(4) .avx-arr {
+  animation-delay: 0.8s;
+}
+.avx-lane:nth-child(3) .avx-arr {
+  animation-delay: 0.9s;
+}
+.avx-lane:nth-child(2) .avx-arr {
+  animation-delay: 1s;
+}
+.avx-lane:nth-child(1) .avx-arr {
+  animation-delay: 1.1s;
+}
 
 /* Value cell */
 .avx-cell {
@@ -151,19 +162,27 @@
   transform: translateX(20px);
   animation: avxFlyInCell 0.4s ease-out forwards;
 }
-.avx-lane:nth-child(4) .avx-cell { animation-delay: 1.0s; }
-.avx-lane:nth-child(3) .avx-cell { animation-delay: 1.1s; }
-.avx-lane:nth-child(2) .avx-cell { animation-delay: 1.2s; }
-.avx-lane:nth-child(1) .avx-cell { animation-delay: 1.3s; }
+.avx-lane:nth-child(4) .avx-cell {
+  animation-delay: 1s;
+}
+.avx-lane:nth-child(3) .avx-cell {
+  animation-delay: 1.1s;
+}
+.avx-lane:nth-child(2) .avx-cell {
+  animation-delay: 1.2s;
+}
+.avx-lane:nth-child(1) .avx-cell {
+  animation-delay: 1.3s;
+}
 
 .avx-val {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
 }
 .avx-type {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.5rem;
   font-weight: 700;
   color: #fea619;
@@ -176,7 +195,7 @@
   align-items: center;
   gap: 0.1rem;
   opacity: 0;
-  animation: avxFadeIn 0.5s ease-out 2.0s both;
+  animation: avxFadeIn 0.5s ease-out 2s both;
 }
 .avx-strike-arrow {
   font-size: 2.2rem;
@@ -185,7 +204,7 @@
   line-height: 1;
 }
 .avx-strike-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.85rem;
   font-weight: 700;
   color: #009d8d;
@@ -194,7 +213,7 @@
 
 /* ===== CONCLUSION ===== */
 .avx-fazit {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 1.4rem;
   font-weight: 900;
   color: #009d8d;
@@ -207,19 +226,52 @@
 
 /* ===== KEYFRAMES ===== */
 @keyframes avxFadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes avxFlyIn {
-  from { opacity: 0; transform: translateX(30px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @keyframes avxFlyInCell {
-  from { opacity: 0; transform: translateX(20px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+.ref {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
 @keyframes avxPulse {
-  0%,100% { transform: scale(1); opacity: 1; }
-  50%     { transform: scale(1.15); opacity: 0.85; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
 }
 </style>

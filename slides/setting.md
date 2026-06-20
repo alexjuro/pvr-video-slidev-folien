@@ -29,6 +29,8 @@ layout: center
   <div class="cycle-note">Ein Taktzyklus</div>
 </div>
 
+<span class="ref">[3]</span>
+
 <style>
 .simd-container {
   display: flex;
@@ -118,5 +120,13 @@ layout: center
   font-weight: 700;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   color: #009d8d;
+}
+
+.ref {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: #999;
 }
 </style>
