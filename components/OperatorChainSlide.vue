@@ -2,8 +2,7 @@
   <div class="chain">
     <!-- ===== TITLE ===== -->
     <div class="chain-title-row">
-      <div class="chain-title">Compiler Optimization:</div>
-      <div class="chain-subtitle">Operator Chaining</div>
+      <div class="chain-title">Operator Chaining</div>
     </div>
 
     <!-- ===== CODE REMINDER ===== -->
@@ -12,7 +11,7 @@
     <!-- ===== TWO PATHS ===== -->
     <div class="chain-paths">
       <!-- ---- NAIVE PATH (top) ---- -->
-      <div class="chain-naive" :class="{ 'chain-naive-done': phase >= 2 }">
+      <div class="chain-naive">
         <div class="chain-path-label chain-naive-label">Naiver Weg</div>
         <div class="chain-naive-flow">
           <div class="chain-step">
@@ -21,19 +20,17 @@
             <span class="chain-op">gradients</span>
             <span class="chain-arr">→</span>
           </div>
-          <!-- temp matrix box -->
-          <Transition name="chain-pop">
-            <div v-if="phase >= 1" class="chain-temp-box">
-              <div class="chain-temp-label">[Temp Matrix]</div>
-              <Transition name="chain-fade">
-                <div v-if="phase >= 2" class="chain-temp-x">
-                  <div class="chain-x-line chain-x-a"></div>
-                  <div class="chain-x-line chain-x-b"></div>
-                </div>
-              </Transition>
+
+          <!-- Temp matrix + X (box click 1, X click 2) -->
+          <div v-click="1" class="chain-temp-box">
+            <div class="chain-temp-label">[Temp Matrix]</div>
+            <div v-click="2" class="chain-temp-x">
+              <div class="chain-x-line chain-x-a"></div>
+              <div class="chain-x-line chain-x-b"></div>
             </div>
-          </Transition>
-          <div class="chain-step" :class="{ 'chain-fade-out': phase >= 2 }">
+          </div>
+
+          <div class="chain-step chain-step-last">
             <span class="chain-arr">→</span>
             <span class="chain-op">weights</span>
             <span class="chain-op-sym">+=</span>
@@ -42,7 +39,7 @@
       </div>
 
       <!-- ---- CONCURNAS PATH (bottom) ---- -->
-      <div class="chain-concurnas" :class="{ 'chain-concurnas-emerge': phase >= 2 }">
+      <div class="chain-concurnas">
         <div class="chain-path-label chain-concurnas-label">Concurnas-Weg</div>
         <div class="chain-concurnas-flow">
           <!-- gear icon -->
@@ -61,15 +58,13 @@
               <span class="chain-in-sym">→</span>
             </div>
           </div>
-          <!-- fused step -->
-          <Transition name="chain-pop">
-            <div v-if="phase >= 2" class="chain-fused">
-              <div class="chain-fused-icon">⚡</div>
-              <div class="chain-fused-label">[Fused Step]</div>
-            </div>
-          </Transition>
-          <!-- combined beam out -->
-          <div v-if="phase >= 2" class="chain-beam">
+          <!-- fused step (click 2) -->
+          <div v-click="2" class="chain-fused">
+            <div class="chain-fused-icon">⚡</div>
+            <div class="chain-fused-label">[Fused Step]</div>
+          </div>
+          <!-- combined beam (click 2) -->
+          <div v-click="2" class="chain-beam">
             <div class="chain-beam-arr">➡</div>
             <div class="chain-beam-label">weights</div>
           </div>
@@ -80,16 +75,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const phase = ref(0)
-
-onMounted(() => {
-  // phase 0→1 after 0.8s: temp matrix appears
-  setTimeout(() => { phase.value = 1 }, 800)
-  // phase 1→2 after 2.5s: X + dissolve + fused step emerges
-  setTimeout(() => { phase.value = 2 }, 3300)
-})
 </script>
 
 <style scoped>
@@ -98,7 +83,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -129,7 +114,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -147,7 +132,7 @@ onMounted(() => {
   animation: cfadeIn 0.6s ease-out 0.6s both;
   transition: opacity 0.8s, border-color 0.8s;
 }
-.chain-naive-done {
+.chain-paths:has(.chain-temp-x:not(.slidev-vclick-hidden)) .chain-naive {
   opacity: 0.25;
   border-color: #3a1a1a;
 }
@@ -170,7 +155,7 @@ onMounted(() => {
   font-weight: 600;
   color: #ccc;
 }
-.chain-fade-out {
+.chain-paths:has(.chain-temp-x:not(.slidev-vclick-hidden)) .chain-step-last {
   opacity: 0.3;
   transition: opacity 0.6s;
 }
@@ -194,8 +179,8 @@ onMounted(() => {
   background: #2a0a0a;
   border: 2px solid #ff3333;
   border-radius: 6px;
+  animation: cpopIn 0.4s ease-out both;
 }
-
 .chain-temp-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
@@ -211,6 +196,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: cpopIn 0.3s ease-out both;
 }
 .chain-x-line {
   position: absolute;
@@ -219,7 +205,6 @@ onMounted(() => {
   background: #ff3333;
   border-radius: 2px;
 }
-
 .chain-x-a { transform: rotate(45deg); }
 .chain-x-b { transform: rotate(-45deg); }
 
@@ -237,7 +222,7 @@ onMounted(() => {
   animation: cfadeIn 0.6s ease-out 0.9s both;
   transition: border-color 0.8s;
 }
-.chain-concurnas-emerge {
+.chain-paths:has(.chain-fused:not(.slidev-vclick-hidden)) .chain-concurnas {
   border-color: #009d8d;
 }
 .chain-concurnas-label {
@@ -303,8 +288,8 @@ onMounted(() => {
   background: #00120f;
   border: 2px solid #009d8d;
   border-radius: 8px;
+  animation: cpopIn 0.4s ease-out both;
 }
-
 .chain-fused-icon {
   font-size: 1.2rem;
   animation: cflash 0.8s ease-in-out infinite alternate;
@@ -322,13 +307,11 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  opacity: 0;
-  animation: cbeamIn 0.6s ease-out 4.0s both;
+  animation: cfadeIn 0.5s ease-out 0.2s both;
 }
 .chain-beam-arr {
   font-size: 1.8rem;
   color: #009d8d;
-  animation: cbeamPulse 0.8s ease-in-out infinite alternate;
 }
 .chain-beam-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -343,24 +326,6 @@ onMounted(() => {
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-}
-
-/* ===== TRANSITIONS ===== */
-.chain-pop-enter-active {
-  animation: cpopIn 0.4s ease-out;
-}
-.chain-pop-leave-active {
-  animation: cpopIn 0.3s ease-in reverse;
-}
-.chain-fade-enter-active {
-  transition: opacity 0.3s;
-}
-.chain-fade-leave-active {
-  transition: opacity 0.4s;
-}
-.chain-fade-enter-from,
-.chain-fade-leave-to {
-  opacity: 0;
 }
 
 /* ===== KEYFRAMES ===== */
@@ -379,14 +344,6 @@ onMounted(() => {
 @keyframes cflash {
   from { opacity: 0.7; transform: scale(1); }
   to   { opacity: 1; transform: scale(1.15); }
-}
-@keyframes cbeamIn {
-  from { opacity: 0; transform: translateX(-20px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes cbeamPulse {
-  from { opacity: 0.7; }
-  to   { opacity: 1; }
 }
 
 .slidev-code {
