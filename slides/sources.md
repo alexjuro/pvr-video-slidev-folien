@@ -32,15 +32,18 @@ layout: default
 }
 
 h1 {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   margin-bottom: 1.2rem;
-  color: #2c3e50;
-  font-size: 1.8rem;
+  color: #191c1e;
+  font-size: 2.8rem;
+  font-weight: 900;
   text-align: left;
 }
 
 .sources-table {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: 0.65rem;
   line-height: 1.8;
 }
 
@@ -51,12 +54,12 @@ h1 {
 }
 
 .sources-table a {
-  color: #2c3e50;
+  color: #191c1e;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .sources-table a:hover {
-  color: #7f8c8d;
+  color: #44474e;
 }
 </style>

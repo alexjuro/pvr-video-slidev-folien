@@ -413,7 +413,7 @@ onMounted(() => {
 }
 .hscale-switch-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.5rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #778cb5;
   letter-spacing: 0.15em;
@@ -430,7 +430,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 0.1rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 1rem;
   width: 100px;
   min-height: 90px;
   background: #0b2447;
@@ -459,9 +459,9 @@ onMounted(() => {
 }
 .hscale-option-name {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: #ccc;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ffffff;
   text-align: center;
   transition: color 0.4s;
 }
@@ -471,7 +471,7 @@ onMounted(() => {
 .hscale-option-desc {
   font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.45rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #778cb5;
   text-align: center;
 }
@@ -521,7 +521,7 @@ onMounted(() => {
   align-items: center;
   justify-content: space-around;
   gap: 0.2rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 1rem;
   min-width: 190px;
   min-height: 110px;
   background: #0b2447;
@@ -532,7 +532,7 @@ onMounted(() => {
 }
 .hscale-vis-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.5rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #778cb5;
   letter-spacing: 0.1em;

@@ -38,24 +38,27 @@ layout: center
 }
 
 .contact-heading {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 2.8rem;
   margin: 0 0 0.5rem;
-  color: #2c3e50;
-  font-weight: 800;
+  color: #191c1e;
+  font-weight: 900;
   letter-spacing: 0.05em;
 }
 
 .contact-name {
-  font-size: 1.4rem;
-  color: #e67e22;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #fea619;
   margin: 0 0 0.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .contact-email {
-  font-size: 1.1rem;
-  color: #555;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.65rem;
+  color: #44474e;
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
 }
 </style>

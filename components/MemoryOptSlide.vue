@@ -73,7 +73,7 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
   font-size: 2.8rem;
   font-weight: 900;
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  color: #fea619;
+  color: #b1c7f3;
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -114,14 +114,14 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
 }
 .memopt-cell-val {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #ffffff;
 }
 .memopt-cell-idx {
   font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.45rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #32476c;
 }
 
@@ -155,9 +155,9 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.4rem 1rem;
+  padding: 0.3rem 0.6rem;
   background: #2a0a0a;
-  border: 2px solid #ff3333;
+  border: 2px solid #ba1a1a;
   border-radius: 8px;
 }
 .memopt-warn-icon {
@@ -169,16 +169,16 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
 }
 .memopt-warn-title {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #ff3333;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ba1a1a;
   letter-spacing: 0.15em;
 }
 .memopt-warn-sub {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: #ff6666;
+  color: #ba1a1a;
   letter-spacing: 0.1em;
 }
 

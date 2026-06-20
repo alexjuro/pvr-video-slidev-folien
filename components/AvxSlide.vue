@@ -78,7 +78,7 @@
   text-align: center;
 }
 .avx-title {
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 900;
   font-family: "JetBrains Mono", "Fira Code", monospace;
   color: #b1c7f3;
@@ -86,8 +86,9 @@
   line-height: 1.1;
 }
 .avx-sub {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
   color: #778cb5;
   letter-spacing: 0.15em;
   margin-top: 0.2rem;
@@ -177,7 +178,7 @@
 
 .avx-val {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 1.1rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #ffffff;
 }
@@ -214,9 +215,9 @@
 /* ===== CONCLUSION ===== */
 .avx-fazit {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: #009d8d;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #999;
   letter-spacing: 0.05em;
   text-align: center;
   margin-top: 0.5rem;

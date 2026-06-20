@@ -68,7 +68,7 @@ const cells = raw.map((v, i) => ({
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #fea619;
+  color: #b1c7f3;
   letter-spacing: 0.08em;
   line-height: 1.1;
 }

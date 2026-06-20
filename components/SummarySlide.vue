@@ -112,7 +112,7 @@
 .summary-code-label,
 .summary-perf-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: #778cb5;
 }
@@ -154,7 +154,7 @@
 }
 .summary-world-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.5rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #778cb5;
   letter-spacing: 0.1em;
@@ -185,9 +185,9 @@
 }
 .sum-bullet {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.6rem;
-  font-weight: 600;
-  color: #ff5555;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ba1a1a;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -277,7 +277,7 @@
 .summary-vec-hint {
   font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.4rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #778cb5;
   letter-spacing: 0.08em;
   margin-top: 0.1rem;
@@ -292,9 +292,9 @@
 }
 .sum-check {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.55rem;
-  font-weight: 600;
-  color: #ccc;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 0.2rem;
@@ -324,7 +324,7 @@
 /* ===== MOTTO ===== */
 .summary-motto {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 700;
   opacity: 0;
   transition: opacity 0.6s;

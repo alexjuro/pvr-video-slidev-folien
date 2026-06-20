@@ -109,7 +109,7 @@ const neurons = [
 }
 .ovec-col-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #778cb5;
   letter-spacing: 0.1em;
@@ -153,7 +153,7 @@ const neurons = [
 .ovec-neuron-idx {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.45rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #32476c;
   min-width: 10px;
 }
@@ -163,7 +163,7 @@ const neurons = [
   position: absolute;
   left: 44px;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #009d8d;
   opacity: 0;
@@ -218,7 +218,7 @@ const neurons = [
 }
 .ovec-state-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #009d8d;
   opacity: 0;

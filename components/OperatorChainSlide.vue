@@ -143,7 +143,7 @@
   border-color: #3a1a1a;
 }
 .chain-naive-label {
-  color: #ff5555;
+  color: #ba1a1a;
 }
 .chain-naive-flow {
   display: flex;
@@ -157,9 +157,9 @@
   align-items: center;
   gap: 0.3rem;
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #ccc;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 .chain-paths:has(.chain-temp-x:not(.slidev-vclick-hidden)) .chain-step-last {
   opacity: 0.3;
@@ -167,7 +167,7 @@
 }
 .chain-op-sym {
   color: #b1c7f3;
-  font-weight: 800;
+  font-weight: 700;
   margin: 0 0.15rem;
 }
 .chain-arr {
@@ -181,17 +181,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem 0.7rem;
+  padding: 0.3rem 0.6rem;
   background: #2a0a0a;
-  border: 2px solid #ff3333;
+  border: 2px solid #ba1a1a;
   border-radius: 6px;
   animation: cpopIn 0.4s ease-out both;
 }
 .chain-temp-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: #ff5555;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #ba1a1a;
   letter-spacing: 0.05em;
 }
 
@@ -208,7 +208,7 @@
   position: absolute;
   width: 120%;
   height: 3px;
-  background: #ff3333;
+  background: #ba1a1a;
   border-radius: 2px;
 }
 .chain-x-a {
@@ -275,8 +275,8 @@
   align-items: center;
   gap: 0.25rem;
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.65rem;
+  font-weight: 700;
   animation: cfadeIn 0.5s ease-out 1.2s both;
 }
 .chain-in-arrow:nth-child(2) {
@@ -306,8 +306,8 @@
 }
 .chain-fused-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.7rem;
-  font-weight: 800;
+  font-size: 0.65rem;
+  font-weight: 700;
   color: #009d8d;
   letter-spacing: 0.05em;
 }
@@ -326,14 +326,14 @@
 .chain-beam-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #fea619;
 }
 
 /* ===== PATH LABELS ===== */
 .chain-path-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
 }

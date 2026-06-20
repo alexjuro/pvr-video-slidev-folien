@@ -42,7 +42,7 @@ layout: center
 
 /* === SIMD HEADLINE === */
 .simd-label {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   color: #b1c7f3;
@@ -69,9 +69,10 @@ layout: center
 }
 
 .instr-label {
-  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
   color: #fea619;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 0.2rem;
 }
@@ -100,26 +101,27 @@ layout: center
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #ffffff;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 .data-label {
-  font-size: 0.8rem;
-  color: #b1c7f3;
-  font-weight: 600;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #778cb5;
+  font-weight: 700;
   letter-spacing: 0.1em;
 }
 
 /* === CYCLE NOTE === */
 .cycle-note {
   margin-top: 0.6rem;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 400;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  color: #009d8d;
+  color: #999;
 }
 
 .ref {

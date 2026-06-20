@@ -71,7 +71,7 @@ layout: center
 }
 .mtw-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #74777f;
   letter-spacing: 0.2em;
@@ -113,10 +113,10 @@ layout: center
 }
 .mtw-wall-text {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: #cc4444;
-  text-shadow: 0 0 10px rgba(204,68,68,0.3);
+  color: #ba1a1a;
+  text-shadow: 0 0 10px rgba(186,26,26,0.3);
   letter-spacing: 0.1em;
   writing-mode: sideways-lr;
 }
@@ -160,15 +160,15 @@ layout: center
   animation: mtwOrbit 4s ease-in-out 1 forwards;
 }
 .mtw-pack-label {
-  padding: 0.4rem 0.5rem;
+  padding: 0.3rem 0.6rem;
   background: linear-gradient(145deg,#2a1a1a,#3a2020);
-  border: 2.5px solid #cc4444;
+  border: 2.5px solid #ba1a1a;
   border-radius: 6px;
-  box-shadow: 0 0 20px rgba(204,68,68,0.2);
+  box-shadow: 0 0 20px rgba(186,26,26,0.2);
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: #ff7777;
+  color: #ffffff;
   text-align: center;
   line-height: 1.4;
 }
@@ -195,7 +195,7 @@ layout: center
 
 /* CPU */
 .mtw-cpu {
-  padding: 0.8rem;
+  padding: 0.8rem 1.5rem;
   background: #0b2447;
   border: 1.5px solid #32476c;
   border-radius: 12px;
@@ -206,7 +206,7 @@ layout: center
 }
 .mtw-cpu-head {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 0.2em;
@@ -217,12 +217,12 @@ layout: center
   gap: 0.3rem;
 }
 .mtw-core {
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.6rem;
   background: #000f27;
   border: 1.5px solid #32476c;
   border-radius: 6px;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #fea619;
   text-align: center;

@@ -110,9 +110,10 @@ normalizedWeights = weights ^ / normFactor
 }
 
 .op-sub {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.8rem;
-  font-weight: 600;
-  color: #74777f;
+  font-weight: 400;
+  color: #999;
   letter-spacing: 0.15em;
   animation: opIn 0.4s ease-out 0.1s both;
 }
@@ -161,7 +162,7 @@ normalizedWeights = weights ^ / normFactor
   align-items: center;
   justify-content: center;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #ffffff;
 }
@@ -186,8 +187,8 @@ normalizedWeights = weights ^ / normFactor
 
 .op-beam-sign {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.6rem;
-  font-weight: 600;
+  font-size: 0.65rem;
+  font-weight: 700;
   color: #009d8d;
   opacity: 0.7;
 }
@@ -197,7 +198,7 @@ normalizedWeights = weights ^ / normFactor
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #b1c7f3;
+  color: #778cb5;
   letter-spacing: 0.2em;
   opacity: 0;
   animation: opIn 0.5s ease-out 0.1s both;

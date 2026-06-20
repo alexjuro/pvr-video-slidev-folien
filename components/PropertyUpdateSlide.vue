@@ -62,7 +62,7 @@ const layers = [
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #fea619;
+  color: #b1c7f3;
   letter-spacing: 0.08em;
   line-height: 1.1;
 }
@@ -101,8 +101,8 @@ const layers = [
 }
 .pup-layer-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.65rem;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -136,19 +136,20 @@ const layers = [
 }
 .pup-bias-key {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.65rem;
+  font-weight: 700;
   color: #b1c7f3;
 }
 .pup-bias-op {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 700;
   color: #778cb5;
 }
 .pup-bias-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.75rem;
-  font-weight: 800;
+  font-size: 0.65rem;
+  font-weight: 700;
   color: #fea619;
 }
 

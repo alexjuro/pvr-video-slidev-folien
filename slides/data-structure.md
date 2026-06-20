@@ -32,7 +32,7 @@ layout: center
 
 .ds9-lbl {
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.9rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #fea619;
   letter-spacing: 0.1em;
@@ -54,7 +54,7 @@ layout: center
   align-items: center;
   justify-content: center;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 1.1rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #ffffff;
 }
@@ -79,7 +79,7 @@ layout: center
   align-items: center;
   justify-content: center;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 1.1rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #ffffff;
 }

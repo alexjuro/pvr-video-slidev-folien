@@ -31,9 +31,10 @@ for (int i = 0; i < data.length; i++) {
 }
 
 .snail-label {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #e74c3c;
+  color: #ba1a1a;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
