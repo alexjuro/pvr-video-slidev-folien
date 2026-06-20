@@ -36,7 +36,7 @@ layout: center
   height: 0;
   border-left: 24px solid transparent;
   border-right: 24px solid transparent;
-  border-bottom: 14px solid #777;
+  border-bottom: 14px solid #32476c;
 }
 
 /* === PILLAR (short, 1/4 of before) === */
@@ -47,7 +47,7 @@ layout: center
   transform: translateX(-50%);
   width: 6px;
   height: 53px;
-  background: #888;
+  background: #0b2447;
   border-radius: 2px;
 }
 
@@ -61,7 +61,7 @@ layout: center
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 15px solid #999;
+  border-bottom: 15px solid #fea619;
   z-index: 2;
 }
 
@@ -72,10 +72,9 @@ layout: center
   right: 40px;
   top: 234px;
   height: 8px;
-  background: #666;
+  background: #778cb5;
   border-radius: 4px;
   transform-origin: center center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   z-index: 3;
   animation: beamWobble 2.5s ease-in-out infinite;
 }
@@ -87,9 +86,9 @@ layout: center
   height: 16px;
   top: 50%;
   transform: translateY(-50%);
-  background: #888;
+  background: #0b2447;
   border-radius: 50%;
-  border: 1px solid #555;
+  border: 1.5px solid #32476c;
 }
 .left-knob { left: -8px; }
 .right-knob { right: -8px; }
@@ -109,13 +108,13 @@ layout: center
 
 .left-label {
   left: 20px;
-  background: #E74C3C;
+  background: #fea619;
   color: #fff;
 }
 
 .right-label {
   right: 20px;
-  background: #2ECC71;
+  background: #009d8d;
   color: #fff;
 }
 
@@ -129,7 +128,7 @@ layout: center
 .caption {
   margin-top: 1rem;
   text-align: center;
-  color: #888;
+  color: #74777f;
   font-size: 1rem;
   font-style: italic;
 }

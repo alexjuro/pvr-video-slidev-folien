@@ -2,8 +2,7 @@
   <div class="ovec">
     <!-- ===== TITLE ===== -->
     <div class="ovec-title-row">
-      <div class="ovec-title">Object Vectorization:</div>
-      <div class="ovec-subtitle">Element-wise Methods</div>
+      <div class="ovec-title">Element-wise Methods</div>
     </div>
 
     <!-- ===== CODE BLOCK ===== -->
@@ -11,46 +10,38 @@
 
     <!-- ===== VISUAL ===== -->
     <div class="ovec-visual">
-      <!-- ---- Left: Neuron column ---- -->
-      <div class="ovec-neurons">
-        <div class="ovec-neuron-col-label">neurons</div>
-        <div
-          v-for="(n, i) in neurons"
-          :key="i"
-          class="ovec-neuron"
-          :class="{ 'ovec-neuron-lit': phase >= 3 }"
-          :style="{ animationDelay: `${3.2 + i * 0.1}s` }"
-        >
+      <!-- Step 3 trigger (invisible, just for :has() selectors) -->
+      <div v-click="3" class="ovec-step3-trigger"></div>
+
+      <!-- ---- Left: Neurons (step 1) ---- -->
+      <div v-click="1" class="ovec-col ovec-neurons">
+        <div class="ovec-col-label">neurons</div>
+        <div v-for="(n, i) in neurons" :key="i" class="ovec-neuron">
           <div class="ovec-neuron-ring">
             <div class="ovec-neuron-dot"></div>
           </div>
           <div class="ovec-neuron-idx">{{ n.id }}</div>
-          <!-- flying value -->
-          <Transition name="ovec-fly">
-            <div v-if="phase >= 3" class="ovec-flying-val" :style="{ animationDelay: `${3.5 + i * 0.12}s` }">
-              {{ n.val }}
-            </div>
-          </Transition>
+          <!-- flying value, hidden until step 3 -->
+          <div class="ovec-flying-val" :style="{ animationDelay: `${i * 0.1}s` }">{{ n.val }}</div>
         </div>
       </div>
 
-      <!-- ---- Middle: broadcast wave (Phase 2) ---- -->
-      <div v-if="phase >= 2" class="ovec-wave-zone">
-        <div class="ovec-wave-line"></div>
-        <div class="ovec-wave-label">broadcast</div>
+      <!-- ---- Middle: Connections (step 2) ---- -->
+      <div v-click="2" class="ovec-col ovec-connections">
+        <div class="ovec-col-label">&nbsp;</div>
+        <div v-for="(_, i) in neurons" :key="i" class="ovec-conn-row" :style="{ animationDelay: `${i * 0.08}s` }">
+          <div class="ovec-conn-line"></div>
+          <div class="ovec-conn-arrow">▶</div>
+        </div>
       </div>
 
-      <!-- ---- Right: states array ---- -->
-      <div class="ovec-states" :class="{ 'ovec-states-fill': phase >= 3 }">
-        <div class="ovec-states-col-label">states</div>
-        <div
-          v-for="(n, i) in neurons"
-          :key="i"
-          class="ovec-state-cell"
-          :class="{ 'ovec-state-filled': phase >= 3 }"
-          :style="{ transitionDelay: `${3.5 + i * 0.12}s` }"
-        >
-          <span v-if="phase >= 3" class="ovec-state-val">{{ n.val }}</span>
+      <!-- ---- Right: States (step 1) ---- -->
+      <div v-click="1" class="ovec-col ovec-states">
+        <div class="ovec-col-label">states</div>
+        <div v-for="(n, i) in neurons" :key="i" class="ovec-state-row">
+          <div class="ovec-state-cell">
+            <span class="ovec-state-val" :style="{ animationDelay: `${i * 0.1}s` }">{{ n.val }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -58,10 +49,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const phase = ref(0)
-
 const neurons = [
   { id: 0, val: '0.80' },
   { id: 1, val: '0.21' },
@@ -70,15 +57,6 @@ const neurons = [
   { id: 4, val: '0.63' },
   { id: 5, val: '0.44' },
 ]
-
-onMounted(() => {
-  // phase 0→1 after 1.0s: ^ blinks
-  setTimeout(() => { phase.value = 1 }, 1000)
-  // phase 1→2 after 2.5s: broadcast wave
-  setTimeout(() => { phase.value = 2 }, 3500)
-  // phase 2→3 after 2.0s: neuron + fill
-  setTimeout(() => { phase.value = 3 }, 5500)
-})
 </script>
 
 <style scoped>
@@ -106,7 +84,7 @@ onMounted(() => {
 }
 .ovec-subtitle {
   font-size: 2rem;
-  font-weight:800;
+  font-weight: 800;
   font-family: 'JetBrains Mono','Fira Code',monospace;
   color: #fea619;
   letter-spacing: 0.12em;
@@ -117,36 +95,41 @@ onMounted(() => {
 .ovec-visual {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  opacity: 0;
-  animation: ofadeIn 0.6s ease-out 0.6s both;
+  gap: 0.5rem;
+  position: relative;
 }
-
-/* ---- Neurons column ---- */
-.ovec-neurons {
+.ovec-col {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.35rem;
 }
-.ovec-neuron-col-label {
+.ovec-col-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.55rem;
   font-weight: 700;
   color: #778cb5;
   letter-spacing: 0.1em;
   margin-bottom: 0.2rem;
+  height: 1rem;
 }
+
+/* ===== STEP 3 TRIGGER ===== */
+.ovec-step3-trigger {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* ===== NEURONS ===== */
 .ovec-neuron {
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  height: 40px;
   position: relative;
-  transition: transform 0.4s, filter 0.4s;
-}
-.ovec-neuron-lit {
-  transform: scale(1.05);
-  filter: brightness(1.3);
 }
 .ovec-neuron-ring {
   width: 36px;
@@ -157,21 +140,12 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
-}
-.ovec-neuron-lit .ovec-neuron-ring {
-  border-color: #fea619;
-  background: #1a0a1a;
 }
 .ovec-neuron-dot {
   width: 8px;
   height: 8px;
-  border-radius:50%;
+  border-radius: 50%;
   background: #778cb5;
-  transition: background 0.5s;
-}
-.ovec-neuron-lit .ovec-neuron-dot {
-  background: #fea619;
 }
 .ovec-neuron-idx {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -181,7 +155,7 @@ onMounted(() => {
   min-width: 10px;
 }
 
-/* flying value */
+/* ===== FLYING VALUES ===== */
 .ovec-flying-val {
   position: absolute;
   left: 44px;
@@ -189,62 +163,45 @@ onMounted(() => {
   font-size: 0.6rem;
   font-weight: 700;
   color: #009d8d;
+  opacity: 0;
+}
+.ovec-visual:has(.ovec-step3-trigger:not(.slidev-vclick-hidden)) .ovec-flying-val {
   animation: oflyRight 0.5s ease-out forwards;
 }
 
-/* ---- Wave zone ---- */
-.ovec-wave-zone {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
+/* ===== CONNECTIONS ===== */
+.ovec-connections {
+  width: 60px;
 }
-.ovec-wave-line {
-  width: 40px;
+.ovec-connections.slidev-vclick-hidden {
+  display: flex !important;
+  visibility: hidden;
+}
+.ovec-conn-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 40px;
+  opacity: 0;
+  animation: ofadeIn 0.4s ease-out forwards;
+}
+.ovec-conn-line {
+  flex: 1;
   height: 2px;
   background: linear-gradient(90deg, #fea619, #009d8d);
-  position: relative;
-  animation: owaveExpand 0.8s ease-out 3.5s both;
+  border-radius: 1px;
 }
-.ovec-wave-line::before,
-.ovec-wave-line::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: inherit;
-  top: -4px;
-  opacity: 0.4;
-  animation: owaveExpand 0.8s ease-out 3.7s both;
-}
-.ovec-wave-line::after {
-  top: 4px;
-  animation-delay: 3.9s;
-}
-.ovec-wave-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.45rem;
-  font-weight: 700;
-  color: #fea619;
-  letter-spacing: 0.1em;
-  opacity: 0;
-  animation: ofadeIn 0.4s ease-out 4.0s both;
+.ovec-conn-arrow {
+  font-size: 0.7rem;
+  color: #009d8d;
+  line-height: 1;
 }
 
-/* ---- States column ---- */
-.ovec-states {
+/* ===== STATES ===== */
+.ovec-state-row {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.35rem;
-}
-.ovec-states-col-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.55rem;
-  font-weight: 700;
-  color: #778cb5;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.2rem;
+  height: 40px;
 }
 .ovec-state-cell {
   width: 50px;
@@ -255,26 +212,16 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
-}
-.ovec-state-filled {
-  border-color: #009d8d;
-  background: #00120f;
 }
 .ovec-state-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
   font-size: 0.7rem;
   font-weight: 700;
   color: #009d8d;
+  opacity: 0;
+}
+.ovec-visual:has(.ovec-step3-trigger:not(.slidev-vclick-hidden)) .ovec-state-val {
   animation: opopIn 0.3s ease-out both;
-}
-
-/* ===== TRANSITIONS ===== */
-.ovec-fly-enter-active {
-  animation: oflyRight 0.5s ease-out;
-}
-.ovec-fly-leave-active {
-  animation: oflyRight 0.3s ease-in reverse;
 }
 
 /* ===== KEYFRAMES ===== */
@@ -288,11 +235,8 @@ onMounted(() => {
 }
 @keyframes oflyRight {
   from { opacity: 0; transform: translateX(-10px); }
-  to   { opacity: 1; transform: translateX(60px); }
-}
-@keyframes owaveExpand {
-  from { transform: scaleX(0); opacity: 0; }
-  to   { transform: scaleX(1); opacity: 1; }
+  60%  { opacity: 1; }
+  to   { opacity: 0; transform: translateX(60px); }
 }
 
 .slidev-code {

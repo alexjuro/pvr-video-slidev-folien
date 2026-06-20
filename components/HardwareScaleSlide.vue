@@ -388,7 +388,7 @@ onMounted(() => {
 }
 .hscale-node-row {
   height: 4px;
-  background: #1a2a3a;
+  background: #32476c;
   border-radius: 1px;
 }
 .hscale-node-conn {
