@@ -87,14 +87,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 0.8rem;
   width: 100%;
 }
 
 /* ===== TITLE ===== */
 .chain-title-row {
   text-align: center;
-  animation: cfadeIn 0.6s ease-out both;
 }
 .chain-title {
   font-size: 2.8rem;
@@ -387,6 +386,6 @@
 }
 
 .slidev-code {
-  font-size: 1.3rem !important;
+  font-size: 1.5rem !important;
 }
 </style>

@@ -38,9 +38,10 @@ layout: center
 .name {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 2.8rem;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1.2rem;
   color: #191c1e;
   font-weight: 900;
+  text-align: left;
 }
 
 .role {

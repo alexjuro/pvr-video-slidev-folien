@@ -69,7 +69,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 0.8rem;
   width: 100%;
 }
 

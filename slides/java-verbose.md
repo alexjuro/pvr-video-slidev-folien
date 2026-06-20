@@ -41,6 +41,6 @@ for (int i = 0; i < data.length; i++) {
 
 
 .slidev-code {
-  font-size: 1.3rem !important;
+  font-size: 1.5rem !important;
 }
 </style>

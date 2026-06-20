@@ -55,14 +55,13 @@ const cells = raw.map((v, i) => ({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 0.8rem;
   width: 100%;
 }
 
 /* ===== TITLE ===== */
 .iv-title-row {
   text-align: center;
-  animation: ivfadeIn 0.6s ease-out both;
 }
 .iv-title {
   font-size: 2.8rem;
@@ -174,6 +173,6 @@ const cells = raw.map((v, i) => ({
   to   { opacity: 1; transform: translateY(0); }
 }
 .slidev-code {
-  font-size: 1.3rem !important;
+  font-size: 1.5rem !important;
 }
 </style>

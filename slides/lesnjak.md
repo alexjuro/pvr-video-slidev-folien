@@ -13,14 +13,14 @@ layout: center
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 0.8rem;
 }
 
 /* === TYPOGRAPHY === */
 .title {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 2.8rem;
-  color: #191c1e;
+  color: #b1c7f3;
   margin: 0;
   font-weight: 900;
 }

@@ -46,7 +46,7 @@ layout: center
   font-weight: 900;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   color: #b1c7f3;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 /* === INSTRUCTION REGISTER === */

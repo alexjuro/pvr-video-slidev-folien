@@ -1,5 +1,5 @@
 ---
-theme: seriph
+theme: default
 layout: center
 drawings:
   persist: false

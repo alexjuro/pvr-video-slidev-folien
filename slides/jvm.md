@@ -19,7 +19,7 @@ layout: center
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 0.8rem;
 }
 
 .logo-wrapper {
@@ -42,8 +42,9 @@ layout: center
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 2.8rem;
   color: #191c1e;
-  margin: 0;
+  margin: 0 0 1.2rem;
   font-weight: 900;
+  text-align: left;
 }
 
 .tagline {

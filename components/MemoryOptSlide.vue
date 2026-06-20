@@ -67,7 +67,6 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
 /* ===== TITLE ===== */
 .memopt-title-row {
   text-align: center;
-  animation: mfadeIn 0.6s ease-out both;
 }
 .memopt-title {
   font-size: 2.8rem;
@@ -203,6 +202,6 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
 }
 
 .slidev-code {
-  font-size: 1.3rem !important;
+  font-size: 1.5rem !important;
 }
 </style>

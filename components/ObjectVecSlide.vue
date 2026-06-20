@@ -68,14 +68,13 @@ const neurons = [
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
+  gap: 0.8rem;
   width: 100%;
 }
 
 /* ===== TITLE ===== */
 .ovec-title-row {
   text-align: center;
-  animation: ofadeIn 0.6s ease-out both;
 }
 .ovec-title {
   font-size: 2.8rem;
@@ -251,6 +250,6 @@ const neurons = [
 }
 
 .slidev-code {
-  font-size: 1.3rem !important;
+  font-size: 1.5rem !important;
 }
 </style>

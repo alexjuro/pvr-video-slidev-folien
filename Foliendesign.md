@@ -11,7 +11,7 @@
 
 ## Style Guide
 
-### 1. Überschrift (Slide-Titel)
+### 1a. Überschrift – Technische Folien (SIMD, AVX, Speicher, etc.)
 
 | Eigenschaft | Wert |
 |---|---|
@@ -19,6 +19,20 @@
 | Größe | `2.8rem` |
 | Gewicht | `900` |
 | Farbe | `#b1c7f3` |
+| Ausrichtung | zentriert (Default durch `layout: center`) |
+
+### 1b. Überschrift – Nicht-technische Folien (Personen, Kontakt, Quellen)
+
+| Eigenschaft | Wert |
+|---|---|
+| Schrift | JetBrains Mono / Fira Code |
+| Größe | `2.8rem` |
+| Gewicht | `900` |
+| Farbe | `#191c1e` |
+| Ausrichtung | linksbündig (`text-align: left`) |
+| Abstand nach unten | `1.2rem` |
+
+Betroffene Folien: `jason.md`, `jvm.md`, `contact.md`, `sources.md`
 
 ### 2. Unterkapitelüberschrift (Sub-Title / Tagline)
 
@@ -47,6 +61,13 @@
 | Gewicht | `400` |
 | Farbe | `#999` |
 
+### 5. Code-Blöcke
+
+| Eigenschaft | Wert |
+|---|---|
+| Schrift | `PT Mono` |
+| Größe | `1.5rem` |
+
 ---
 
 ## Abstände
@@ -73,7 +94,8 @@
 
 | Kontext | Wert |
 |---|---|
-| Titel nach unten | `0.5rem` |
+| Titel nach unten (technisch) | `0.4rem` – `0.5rem` |
+| Titel nach unten (nicht-technisch) | `1.2rem` |
 | Abstand vor Abschluss | `0.5rem` – `0.6rem` |
 | Abstand vor Kommentar | `0.8rem` – `1rem` |
 
@@ -91,7 +113,7 @@
 
 ### Zentrierung
 
-Alle Folieninhalte werden primär **mittig** platziert (`layout: center` oder `align-items: center; justify-content: center`). Ausnahmen sind Folien mit besonderen Layout-Anforderungen (z. B. Quellenverzeichnis mit linksbündiger Tabelle).
+Alle Folieninhalte werden primär **mittig** platziert (`layout: center` oder `align-items: center; justify-content: center`). Ausnahmen sind Folien mit besonderen Layout-Anforderungen (z. B. Quellenverzeichnis mit linksbündiger Tabelle) sowie nicht-technische Folien, deren Überschrift linksbündig (`text-align: left`) gesetzt wird.
 
 ### Farben
 

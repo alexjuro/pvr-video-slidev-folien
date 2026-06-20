@@ -10,7 +10,7 @@ appliedSin = sin(myData ^ )
 
 <style>
 .slidev-code {
-  font-size: 2.4rem !important;
+  font-size: 1.5rem !important;
 }
 
 .ref {
