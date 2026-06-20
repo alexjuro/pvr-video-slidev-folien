@@ -1,19 +1,6 @@
 <template>
   <div class="iv">
-    <!-- ===== TITLE ===== -->
-    <div class="iv-title-row">
-      <div class="iv-title">Implicit Vectorization</div>
-    </div>
-
-    <!-- ===== STEP 1: CODE COMPARISON ===== -->
-    <div v-click="1" class="iv-code-area">
-      <div class="iv-scalar">
-        <pre class="slidev-code"><code class="language-java">y = sin(x)</code></pre>
-      </div>
-      <pre class="slidev-code iv-code-main"><code class="language-java">y = sin(weights)</code></pre>
-    </div>
-
-    <!-- ===== STEP 2: ARRAY GRID ===== -->
+    <!-- ===== ARRAY GRID (click 2) ===== -->
     <div v-click="2" class="iv-array-wrap">
       <!-- Step 4 trigger for flooding -->
       <div v-click="4" class="iv-step4-trigger"></div>
@@ -28,12 +15,6 @@
           <span class="iv-cell-val iv-cell-after">{{ cell.after }}</span>
         </div>
       </div>
-    </div>
-
-    <!-- ===== STEP 3: TRANSPILE LINE ===== -->
-    <div v-click="3" class="iv-transpile">
-      <pre class="slidev-code iv-code-main"><code class="language-java">y = sin(weights^)</code></pre>
-      <div class="iv-transpile-label">Compiler transpiliert zu:</div>
     </div>
   </div>
 
@@ -57,31 +38,6 @@ const cells = raw.map((v, i) => ({
   justify-content: center;
   gap: 0.8rem;
   width: 100%;
-}
-
-/* ===== TITLE ===== */
-.iv-title-row {
-  text-align: center;
-}
-.iv-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #b1c7f3;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
-}
-
-/* ===== CODE ===== */
-.iv-code-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  animation: ivfadeIn 0.5s ease-out both;
-}
-.iv-scalar {
-  opacity: 0.4;
 }
 
 /* ===== STEP 4 TRIGGER ===== */
@@ -143,22 +99,6 @@ const cells = raw.map((v, i) => ({
   color: #009d8d;
 }
 
-/* ===== TRANSPILE ===== */
-.iv-transpile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-  animation: ivfadeIn 0.5s ease-out both;
-}
-.iv-transpile-label {
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #74777f;
-  letter-spacing: 0.1em;
-}
-
 /* ===== KEYFRAMES ===== */
 .ref {
   position: fixed;
@@ -171,8 +111,5 @@ const cells = raw.map((v, i) => ({
 @keyframes ivfadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-.slidev-code {
-  font-size: 1.5rem !important;
 }
 </style>

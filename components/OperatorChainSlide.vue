@@ -1,16 +1,6 @@
 <template>
   <div class="chain">
-    <!-- ===== TITLE ===== -->
-    <div class="chain-title-row">
-      <div class="chain-title">Operator Chaining</div>
-    </div>
-
-    <!-- ===== CODE REMINDER ===== -->
-    <pre
-      class="slidev-code"
-    ><code class="language-java">weights^^ += learningRate * gradients^</code></pre>
-
-    <!-- ===== TWO PATHS ===== -->
+<!-- ===== TWO PATHS ===== -->
     <div class="chain-paths">
       <!-- ---- NAIVE PATH (top) ---- -->
       <div class="chain-naive">
@@ -62,12 +52,11 @@
           </div>
           <!-- fused step (click 2) -->
           <div v-click="2" class="chain-fused">
-            <div class="chain-fused-icon">⚡</div>
             <div class="chain-fused-label">[Fused Step]</div>
           </div>
           <!-- combined beam (click 2) -->
           <div v-click="2" class="chain-beam">
-            <div class="chain-beam-arr">➡</div>
+            <div class="chain-beam-arr">→</div>
             <div class="chain-beam-label">weights</div>
           </div>
         </div>
@@ -89,27 +78,6 @@
   justify-content: center;
   gap: 0.8rem;
   width: 100%;
-}
-
-/* ===== TITLE ===== */
-.chain-title-row {
-  text-align: center;
-}
-.chain-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  font-family: "JetBrains Mono", "Fira Code", monospace;
-  color: #b1c7f3;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
-}
-.chain-subtitle {
-  font-size: 2rem;
-  font-weight: 800;
-  font-family: "JetBrains Mono", "Fira Code", monospace;
-  color: #fea619;
-  letter-spacing: 0.12em;
-  margin-top: 0.1rem;
 }
 
 /* ===== PATHS CONTAINER ===== */
@@ -254,7 +222,6 @@
 }
 .chain-gear-icon {
   font-size: 1.6rem;
-  animation: cspin 3s linear infinite;
 }
 .chain-gear-text {
   font-family: "JetBrains Mono", "Fira Code", monospace;
@@ -298,10 +265,6 @@
   border: 2px solid #009d8d;
   border-radius: 8px;
   animation: cpopIn 0.4s ease-out both;
-}
-.chain-fused-icon {
-  font-size: 1.2rem;
-  animation: cflash 0.8s ease-in-out infinite alternate;
 }
 .chain-fused-label {
   font-family: "JetBrains Mono", "Fira Code", monospace;
@@ -374,18 +337,5 @@
     transform: rotate(360deg);
   }
 }
-@keyframes cflash {
-  from {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1.15);
-  }
-}
 
-.slidev-code {
-  font-size: 1.5rem !important;
-}
 </style>

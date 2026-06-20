@@ -9,10 +9,6 @@ appliedSin = sin(myData ^ )
 <span class="ref">[4]</span>
 
 <style>
-.slidev-code {
-  font-size: 1.5rem !important;
-}
-
 .ref {
   position: fixed;
   bottom: 1rem;

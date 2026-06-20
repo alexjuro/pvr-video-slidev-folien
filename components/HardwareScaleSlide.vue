@@ -1,11 +1,6 @@
 <template>
   <div class="hscale">
-    <!-- ===== STEP 1: CODE ===== -->
-    <pre
-      class="slidev-code"
-    ><code class="language-java">y = sin(weights^)</code></pre>
-
-    <!-- ===== STEP 2: CONTENT ===== -->
+<!-- ===== CONTENT ===== -->
     <div v-click="1" class="hscale-content">
       <!-- ===== HARDWARE SWITCH ===== -->
       <div class="hscale-switch-area">
@@ -722,7 +717,4 @@ onMounted(() => {
   }
 }
 
-.slidev-code {
-  font-size: 1.5rem !important;
-}
 </style>

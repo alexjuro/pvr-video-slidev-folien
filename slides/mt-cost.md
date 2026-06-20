@@ -8,7 +8,7 @@ layout: center
   <div class="mtw-col">
     <div class="mtw-code-row">
       <pre class="slidev-code"><code class="language-java">for(elem:elements){ process(elem); }</code></pre>
-      <div class="mtw-arrow">&rarr;</div>
+      <div class="mtw-arrow">→</div>
     </div>
   </div>
 
@@ -253,9 +253,5 @@ layout: center
   right: 1.5rem;
   font-size: 0.8rem;
   color: #999;
-}
-
-.slidev-code {
-  font-size: 1.5rem !important;
 }
 </style>

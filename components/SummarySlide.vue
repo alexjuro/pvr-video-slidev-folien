@@ -4,8 +4,7 @@
     <div class="summary-hero">
       <div class="summary-code-label">Code</div>
       <div class="summary-big-arrow">
-        <div class="summary-arrow-body"></div>
-        <div class="summary-arrow-head">➡</div>
+        <div class="summary-arrow-head">→</div>
       </div>
       <div class="summary-perf-label">Leistung</div>
     </div>
@@ -39,7 +38,7 @@
           <div class="summary-vec-lanes">
             <div v-for="i in 4" :key="i" class="summary-vec-lane">
               <div class="summary-vec-cell summary-vec-in">x</div>
-              <div class="summary-vec-op">▶</div>
+              <div class="summary-vec-op">→</div>
               <div class="summary-vec-cell summary-vec-out">y</div>
             </div>
           </div>
@@ -294,7 +293,7 @@
   font-family: "JetBrains Mono", "Fira Code", monospace;
   font-size: 0.65rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #191c1e;
   display: flex;
   align-items: center;
   gap: 0.2rem;

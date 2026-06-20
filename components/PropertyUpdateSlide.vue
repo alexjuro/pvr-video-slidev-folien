@@ -1,19 +1,11 @@
 <template>
   <div class="pup">
-    <!-- ===== TITLE ===== -->
-    <div class="pup-title-row">
-      <div class="pup-title">Object Properties</div>
-    </div>
-
-    <!-- ===== CODE BLOCK ===== -->
-    <pre class="slidev-code"><code class="language-java">layers^.bias = 0.5</code></pre>
-
-    <!-- ===== THREE LAYER RECTANGLES ===== -->
+<!-- ===== THREE LAYER RECTANGLES ===== -->
     <div class="pup-layers">
-      <!-- Step 2 trigger -->
-      <div v-click="2" class="pup-step2"></div>
+      <!-- Step 1 trigger -->
+      <div v-click="1" class="pup-step2"></div>
 
-      <div v-click="1" class="pup-layers-inner">
+      <div class="pup-layers-inner">
         <div v-for="(layer, i) in layers" :key="i" class="pup-layer-row">
           <div class="pup-layer" :style="{ animationDelay: `${i * 0.15}s` }">
             <span class="pup-layer-label">{{ layer.name }}</span>
@@ -51,19 +43,6 @@ const layers = [
   justify-content: center;
   gap: 0.8rem;
   width: 100%;
-}
-
-/* ===== TITLE ===== */
-.pup-title-row {
-  text-align: center;
-}
-.pup-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #b1c7f3;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
 }
 
 /* ===== LAYERS ===== */
@@ -168,9 +147,5 @@ const layers = [
 @keyframes ppopIn {
   from { opacity: 0; transform: scale(0.7); }
   to   { opacity: 1; transform: scale(1); }
-}
-
-.slidev-code {
-  font-size: 1.5rem !important;
 }
 </style>

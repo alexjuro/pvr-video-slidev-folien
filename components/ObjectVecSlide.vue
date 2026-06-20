@@ -1,42 +1,34 @@
 <template>
   <div class="ovec">
-    <!-- ===== TITLE ===== -->
-    <div class="ovec-title-row">
-      <div class="ovec-title">Element-wise Methods</div>
-    </div>
-
-    <!-- ===== CODE BLOCK ===== -->
-    <pre class="slidev-code"><code class="language-java">states = neurons^.getActiveState()</code></pre>
-
-    <!-- ===== VISUAL ===== -->
+<!-- ===== VISUAL ===== -->
     <div class="ovec-visual">
-      <!-- Step 3 trigger (invisible, just for :has() selectors) -->
-      <div v-click="3" class="ovec-step3-trigger"></div>
+      <!-- Step 2 trigger (invisible, just for :has() selectors) -->
+      <div v-click="2" class="ovec-step3-trigger"></div>
 
-      <!-- ---- Left: Neurons (step 1) ---- -->
-      <div v-click="1" class="ovec-col ovec-neurons">
+      <!-- ---- Left: Neurons (default) ---- -->
+      <div class="ovec-col ovec-neurons">
         <div class="ovec-col-label">neurons</div>
         <div v-for="(n, i) in neurons" :key="i" class="ovec-neuron">
           <div class="ovec-neuron-ring">
             <div class="ovec-neuron-dot"></div>
           </div>
           <div class="ovec-neuron-idx">{{ n.id }}</div>
-          <!-- flying value, hidden until step 3 -->
+          <!-- flying value, hidden until step 2 -->
           <div class="ovec-flying-val" :style="{ animationDelay: `${i * 0.1}s` }">{{ n.val }}</div>
         </div>
       </div>
 
-      <!-- ---- Middle: Connections (step 2) ---- -->
-      <div v-click="2" class="ovec-col ovec-connections">
+      <!-- ---- Middle: Connections (step 1) ---- -->
+      <div v-click="1" class="ovec-col ovec-connections">
         <div class="ovec-col-label">&nbsp;</div>
         <div v-for="(_, i) in neurons" :key="i" class="ovec-conn-row" :style="{ animationDelay: `${i * 0.08}s` }">
           <div class="ovec-conn-line"></div>
-          <div class="ovec-conn-arrow">▶</div>
+          <div class="ovec-conn-arrow">→</div>
         </div>
       </div>
 
-      <!-- ---- Right: States (step 1) ---- -->
-      <div v-click="1" class="ovec-col ovec-states">
+      <!-- ---- Right: States (default) ---- -->
+      <div class="ovec-col ovec-states">
         <div class="ovec-col-label">states</div>
         <div v-for="(n, i) in neurons" :key="i" class="ovec-state-row">
           <div class="ovec-state-cell">
@@ -70,27 +62,6 @@ const neurons = [
   justify-content: center;
   gap: 0.8rem;
   width: 100%;
-}
-
-/* ===== TITLE ===== */
-.ovec-title-row {
-  text-align: center;
-}
-.ovec-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #b1c7f3;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
-}
-.ovec-subtitle {
-  font-size: 2rem;
-  font-weight: 800;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #fea619;
-  letter-spacing: 0.12em;
-  margin-top: 0.1rem;
 }
 
 /* ===== VISUAL ===== */
@@ -247,9 +218,5 @@ const neurons = [
   from { opacity: 0; transform: translateX(-10px); }
   60%  { opacity: 1; }
   to   { opacity: 0; transform: translateX(60px); }
-}
-
-.slidev-code {
-  font-size: 1.5rem !important;
 }
 </style>

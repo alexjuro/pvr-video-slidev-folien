@@ -38,9 +38,4 @@ for (int i = 0; i < data.length; i++) {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
-
-.slidev-code {
-  font-size: 1.5rem !important;
-}
 </style>

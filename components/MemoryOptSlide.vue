@@ -1,16 +1,6 @@
 <template>
   <div class="memopt">
-    <!-- ===== TITLE ===== -->
-    <div class="memopt-title-row">
-      <div class="memopt-title">In-Place Vectorization</div>
-    </div>
-
-    <!-- ===== CODE BLOCK ===== -->
-    <pre
-      class="slidev-code"
-    ><code class="language-java">weights^^ += learningRate * gradients^</code></pre>
-
-    <!-- ===== STEP 1: RAM / REGISTER ===== -->
+<!-- ===== STEP 1: RAM / REGISTER ===== -->
     <div v-click class="memopt-ram-wrap">
       <div class="memopt-ram">
         <div class="memopt-ram-label">weights (RAM)</div>
@@ -27,7 +17,7 @@
     <div v-click class="memopt-arrows-wrap">
       <div class="memopt-arrows-row">
         <div v-for="(_, i) in cells" :key="i" class="memopt-arrow-cell">
-          <div class="memopt-arrow-down">▶</div>
+          <div class="memopt-arrow-down">→</div>
           <div class="memopt-arrow-label">new</div>
         </div>
       </div>
@@ -62,19 +52,6 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
   gap: 0.8rem;
   width: 100%;
   position: relative;
-}
-
-/* ===== TITLE ===== */
-.memopt-title-row {
-  text-align: center;
-}
-.memopt-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  font-family: "JetBrains Mono", "Fira Code", monospace;
-  color: #b1c7f3;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
 }
 
 /* ===== RAM ===== */
@@ -201,7 +178,4 @@ const cells = ["0.25", "0.88", "0.12", "0.47", "0.03", "0.64", "0.91", "0.37"];
   }
 }
 
-.slidev-code {
-  font-size: 1.5rem !important;
-}
 </style>

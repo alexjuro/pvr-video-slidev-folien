@@ -12,7 +12,7 @@ layout: center
       <span class="op-cell-mini">0.12</span>
       <span class="op-cell-mini">0.47</span>
     </div>
-    <span class="op-op">&rarr;</span>
+    <span class="op-op">→</span>
     <span class="op-factor">normFactor = 2.0</span>
   </div>
 
@@ -221,9 +221,5 @@ normalizedWeights = weights ^ / normFactor
   right: 1.5rem;
   font-size: 0.8rem;
   color: #999;
-}
-
-.slidev-code {
-  font-size: 1.5rem !important;
 }
 </style>
