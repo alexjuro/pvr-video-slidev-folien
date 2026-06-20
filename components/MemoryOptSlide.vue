@@ -9,17 +9,22 @@
     <!-- ===== CODE BLOCK ===== -->
     <pre class="slidev-code"><code class="language-java">weights^^ += learningRate * gradients^</code></pre>
 
-    <!-- ===== RAM / REGISTER VIS ===== -->
-    <div class="memopt-ram">
-      <div class="memopt-ram-label">weights (RAM)</div>
-      <div class="memopt-cells">
-        <div v-for="(v,i) in cells" :key="i" class="memopt-cell" :class="{ 'memopt-cell-active': phase >= 3 }">
-          <span class="memopt-cell-val">{{ v }}</span>
-          <span class="memopt-cell-idx">{{ i }}</span>
+    <!-- ===== STEP 1: RAM / REGISTER ===== -->
+    <div v-click class="memopt-ram-wrap">
+      <div class="memopt-ram">
+        <div class="memopt-ram-label">weights (RAM)</div>
+        <div class="memopt-cells">
+          <div v-for="(v,i) in cells" :key="i" class="memopt-cell">
+            <span class="memopt-cell-val">{{ v }}</span>
+            <span class="memopt-cell-idx">{{ i }}</span>
+          </div>
         </div>
       </div>
-      <!-- in-place arrows -->
-      <div v-if="phase >= 3" class="memopt-arrows-row">
+    </div>
+
+    <!-- ===== STEP 2: IN-PLACE ARROWS ===== -->
+    <div v-click class="memopt-arrows-wrap">
+      <div class="memopt-arrows-row">
         <div v-for="(_,i) in cells" :key="i" class="memopt-arrow-cell">
           <div class="memopt-arrow-down">⬇</div>
           <div class="memopt-arrow-label">new</div>
@@ -27,34 +32,21 @@
       </div>
     </div>
 
-    <!-- ===== BOTTLENECK WARNING (Phase 1) ===== -->
-    <Transition name="memopt-pop">
-      <div v-if="phase >= 1" class="memopt-warning">
+    <!-- ===== STEP 3: BOTTLENECK WARNING ===== -->
+    <div v-click class="memopt-warning-wrap">
+      <div class="memopt-warning">
         <div class="memopt-warn-icon">🧠</div>
         <div class="memopt-warn-text">
           <div class="memopt-warn-title">LOW MEMORY</div>
           <div class="memopt-warn-sub">ALLOCATION OVERHEAD</div>
         </div>
       </div>
-    </Transition>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const phase = ref(0)
-
 const cells = ['0.25', '0.88', '0.12', '0.47', '0.03', '0.64', '0.91', '0.37']
-
-onMounted(() => {
-  // phase 0→1 after 0.5s: bottleneck warning appears
-  setTimeout(() => { phase.value = 1 }, 500)
-  // phase 1→2 after 2.5s: ^^ highlight appears
-  setTimeout(() => { phase.value = 2 }, 3000)
-  // phase 2→3 after 4.5s: in-place arrows
-  setTimeout(() => { phase.value = 3 }, 5500)
-})
 </script>
 
 <style scoped>
@@ -63,7 +55,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.8rem;
   width: 100%;
   position: relative;
 }
@@ -90,7 +82,6 @@ onMounted(() => {
   margin-top: 0.1rem;
 }
 
-
 /* ===== RAM ===== */
 .memopt-ram {
   display: flex;
@@ -101,8 +92,6 @@ onMounted(() => {
   background: #0b2447;
   border: 1.5px solid #32476c;
   border-radius: 12px;
-  opacity: 0;
-  animation: mfadeIn 0.6s ease-out 0.6s both;
 }
 .memopt-ram-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -126,11 +115,6 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 0.1rem;
-  transition: border-color 0.5s, background 0.5s, box-shadow 0.5s;
-}
-.memopt-cell-active {
-  border-color: #009d8d;
-  background: #00120f;
 }
 .memopt-cell-val {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -144,28 +128,19 @@ onMounted(() => {
   font-weight: 600;
   color: #32476c;
 }
+
+/* ===== ARROWS ===== */
 .memopt-arrows-row {
   display: flex;
   gap: 3px;
-  margin-top: 0.15rem;
 }
 .memopt-arrow-cell {
   width: 56px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
-  animation: mfadeIn 0.5s ease-out forwards;
+  animation: mfadeIn 0.4s ease-out both;
 }
-.memopt-arrow-cell:nth-child(1) { animation-delay: 5.7s; }
-.memopt-arrow-cell:nth-child(2) { animation-delay: 5.8s; }
-.memopt-arrow-cell:nth-child(3) { animation-delay: 5.9s; }
-.memopt-arrow-cell:nth-child(4) { animation-delay: 6.0s; }
-.memopt-arrow-cell:nth-child(5) { animation-delay: 6.1s; }
-.memopt-arrow-cell:nth-child(6) { animation-delay: 6.2s; }
-.memopt-arrow-cell:nth-child(7) { animation-delay: 6.3s; }
-.memopt-arrow-cell:nth-child(8) { animation-delay: 6.4s; }
-
 .memopt-arrow-down {
   font-size: 1rem;
   color: #009d8d;
@@ -212,22 +187,10 @@ onMounted(() => {
   letter-spacing: 0.1em;
 }
 
-/* ===== TRANSITIONS ===== */
-.memopt-pop-enter-active {
-  animation: mpopIn 0.5s ease-out;
-}
-.memopt-pop-leave-active {
-  animation: mpopIn 0.3s ease-in reverse;
-}
-
 /* ===== KEYFRAMES ===== */
 @keyframes mfadeIn {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes mpopIn {
-  from { opacity: 0; transform: scale(0.7); }
-  to   { opacity: 1; transform: scale(1); }
 }
 @keyframes mwarnPulse {
   0%,100% { box-shadow: 0 0 30px rgba(255,51,51,0.3), 0 0 60px rgba(255,51,51,0.1); }
