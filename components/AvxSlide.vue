@@ -20,7 +20,6 @@
               <span class="avx-val">0.25</span>
               <span class="avx-type">float64</span>
             </div>
-            <div class="avx-slot"></div>
           </div>
           <!-- Lane 2 -->
           <div class="avx-lane">
@@ -29,7 +28,6 @@
               <span class="avx-val">0.88</span>
               <span class="avx-type">float64</span>
             </div>
-            <div class="avx-slot"></div>
           </div>
           <!-- Lane 3 -->
           <div class="avx-lane">
@@ -38,7 +36,6 @@
               <span class="avx-val">0.12</span>
               <span class="avx-type">float64</span>
             </div>
-            <div class="avx-slot"></div>
           </div>
           <!-- Lane 4 -->
           <div class="avx-lane">
@@ -47,7 +44,6 @@
               <span class="avx-val">0.47</span>
               <span class="avx-type">float64</span>
             </div>
-            <div class="avx-slot"></div>
           </div>
         </div>
 
@@ -124,7 +120,6 @@
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
-  position: relative;
 }
 
 /* Arrow flying in */
@@ -173,18 +168,6 @@
   font-weight: 700;
   color: #fea619;
 }
-
-/* Slot gaps between lanes */
-.avx-slot {
-  width: 4px;
-  height: 70px;
-  background: #32476c;
-  opacity: 0.5;
-  position: absolute;
-  right: -4px;
-  top: 0;
-}
-.avx-lane:last-child .avx-slot { display: none; }
 
 /* ===== STRIKE ARROW ===== */
 .avx-strike {
