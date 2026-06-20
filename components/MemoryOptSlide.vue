@@ -2,8 +2,7 @@
   <div class="memopt">
     <!-- ===== TITLE ===== -->
     <div class="memopt-title-row">
-      <div class="memopt-title">Memory Optimization:</div>
-      <div class="memopt-subtitle">In-Place Vectorization</div>
+      <div class="memopt-title">In-Place Vectorization</div>
     </div>
 
     <!-- ===== CODE BLOCK ===== -->
@@ -26,7 +25,7 @@
     <div v-click class="memopt-arrows-wrap">
       <div class="memopt-arrows-row">
         <div v-for="(_,i) in cells" :key="i" class="memopt-arrow-cell">
-          <div class="memopt-arrow-down">⬇</div>
+          <div class="memopt-arrow-down">▶</div>
           <div class="memopt-arrow-label">new</div>
         </div>
       </div>
@@ -37,8 +36,8 @@
       <div class="memopt-warning">
         <div class="memopt-warn-icon">🧠</div>
         <div class="memopt-warn-text">
-          <div class="memopt-warn-title">LOW MEMORY</div>
-          <div class="memopt-warn-sub">ALLOCATION OVERHEAD</div>
+          <div class="memopt-warn-title">SPEICHERMANGEL</div>
+          <div class="memopt-warn-sub">ALLOCATIONS-OVERHEAD</div>
         </div>
       </div>
     </div>
@@ -69,17 +68,9 @@ const cells = ['0.25', '0.88', '0.12', '0.47', '0.03', '0.64', '0.91', '0.37']
   font-size: 2.8rem;
   font-weight: 900;
   font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #b1c7f3;
+  color: #fea619;
   letter-spacing: 0.08em;
   line-height: 1.1;
-}
-.memopt-subtitle {
-  font-size: 2rem;
-  font-weight: 800;
-  font-family: 'JetBrains Mono','Fira Code',monospace;
-  color: #fea619;
-  letter-spacing: 0.12em;
-  margin-top: 0.1rem;
 }
 
 /* ===== RAM ===== */
@@ -142,9 +133,10 @@ const cells = ['0.25', '0.88', '0.12', '0.47', '0.03', '0.64', '0.91', '0.37']
   animation: mfadeIn 0.4s ease-out both;
 }
 .memopt-arrow-down {
-  font-size: 1rem;
-  color: #009d8d;
-  animation: mbounce 0.6s ease-in-out infinite alternate;
+  font-size: 0.85rem;
+  color: #fea619;
+  line-height: 1;
+  transform: rotate(90deg);
 }
 .memopt-arrow-label {
   font-family: 'JetBrains Mono','Fira Code',monospace;
@@ -162,8 +154,6 @@ const cells = ['0.25', '0.88', '0.12', '0.47', '0.03', '0.64', '0.91', '0.37']
   background: #2a0a0a;
   border: 2px solid #ff3333;
   border-radius: 8px;
-  box-shadow: 0 0 30px rgba(255,51,51,0.3), 0 0 60px rgba(255,51,51,0.1);
-  animation: mwarnPulse 1.5s ease-in-out infinite;
 }
 .memopt-warn-icon {
   font-size: 1.6rem;
@@ -191,14 +181,6 @@ const cells = ['0.25', '0.88', '0.12', '0.47', '0.03', '0.64', '0.91', '0.37']
 @keyframes mfadeIn {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes mwarnPulse {
-  0%,100% { box-shadow: 0 0 30px rgba(255,51,51,0.3), 0 0 60px rgba(255,51,51,0.1); }
-  50%     { box-shadow: 0 0 45px rgba(255,51,51,0.5), 0 0 80px rgba(255,51,51,0.2); }
-}
-@keyframes mbounce {
-  from { transform: translateY(-2px); }
-  to   { transform: translateY(4px); }
 }
 
 .slidev-code {
